@@ -1,0 +1,132 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  user_id   String  @id
+  sns_type  String
+  sns_id    String
+  email     String?
+  nickname  String?
+  profile_img String?
+  regist_date DateTime?  @default(now())
+  unregist_date DateTime?
+  agreement Boolean @default(false)
+  createdAt DateTime?  @default(now())
+  updatedAt DateTime?
+  sessions  Session[]
+  chattings Chatting[] 
+  reviews   Review[]
+  opinions  Opinion[]
+  @@map("user")
+}
+
+model Session {
+  session_id    String    @id
+  user_id       String
+  session_time  DateTime? @default(now())
+  title         String?   @db.VarChar(1024)
+  createAt      DateTime? @default(now())
+  updateAt      DateTime?
+  // Relations
+  user          User      @relation(fields: [user_id], references: [user_id])
+  chattings     Chatting[]
+
+  @@map("session")
+}
+
+model Chatting {
+  chat_id        Int       @id @default(autoincrement())
+  user_id        String
+  session_id     String
+  chat_type      String?
+  question       String    @db.VarChar(4096)
+  question_time  DateTime? @default(now()) 
+  summary        String    @db.VarChar(4096) @default("") 
+  answer         String?   @db.Text
+  answer_time    DateTime?   @default(now())
+  used_token     Int?
+  createAt       DateTime? @default(now())
+  updateAt       DateTime?
+  // Relations
+  user           User      @relation(fields: [user_id], references: [user_id])
+  session        Session   @relation(fields: [session_id], references: [session_id])
+
+  @@index([user_id, session_id], name: "session_idx")
+  @@map("chatting")
+}
+
+model Review {
+  review_id           Int      @id @default(autoincrement())
+  user_id             String
+  nickname            String?
+  doctor_id           Int
+  content             String?  @db.Text
+  total_score         Float?
+  kindness_score      Float?
+  explaination_score  Float?
+  satisfaction_score  Float?
+  recommand_score     Float?
+  createAt            DateTime? @default(now())
+  updateAt            DateTime?
+
+  // Relations
+  user                User     @relation(fields: [user_id], references: [user_id])
+  // doctor           Doctor   @relation(fields: [doctor_id], references: [doctor_id]) // 주석 처리된 FK, 필요시 주석 해제
+
+  @@index([doctor_id], name: "user_review_idx1")
+  @@index([user_id, doctor_id], name: "user_review_idx2")
+  @@map("review")
+}
+
+model Opinion {
+  opinion_id    Int      @id @default(autoincrement())
+  user_id       String
+  opinion_type  Int?      @default(0)
+  doctor_id     Int?
+  title         String?   @db.VarChar(1024)
+  content       String?   @db.VarChar(4096)
+  memo          String?   @db.Text
+  createAt      DateTime? @default(now())
+  updateAt      DateTime?
+
+  // Relations
+  user          User      @relation(fields: [user_id], references: [user_id])
+
+  @@index([user_id], name: "customer_opinion_idx1")
+  @@map("opinion")
+}
+
+model Notice {
+  notice_id Int      @id @default(autoincrement())
+  title     String?  @db.VarChar(200)
+  content   String?  @db.Text
+  is_active Boolean  @default(true) @db.TinyInt
+  createAt  DateTime @default(now())
+  updateAt  DateTime? @db.DateTime
+
+  @@map("notice")
+}
+
+model Admin {
+  admin_id    String   @id
+  name        String?  @db.VarChar(1024)
+  description String?  @db.Text
+  parent_id   String?     
+  is_active   Boolean  @default(true) @db.TinyInt
+  createAt    DateTime @default(now())
+  updateAt    DateTime? @db.DateTime
+
+  @@map("admin")
+}
