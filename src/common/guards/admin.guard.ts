@@ -19,7 +19,6 @@ export class AdminGuard implements CanActivate {
       console.log(`AdminGuard, canActivate passed by @GuardPass`);
       return true;
     }
-    console.log('AdminGuard, canActivate');   
     const req = context.switchToHttp().getRequest();
     const authHeader = req.headers['authorization'];
     let user_id: string;
@@ -33,8 +32,6 @@ export class AdminGuard implements CanActivate {
         });
         user_id = payload.user_id ?? '';
         is_admin = payload.is_admin;
-
-        console.log(`user_id: ${user_id}, is_admin: ${is_admin}`);
 
         if(!user_id ) {
           throw new UnauthorizedException('관리자 인증이 필요합니다.');
@@ -78,8 +75,7 @@ export function AdminGuard(is_active: boolean = true): any {
         console.log(`AdminGuard, canActivate passed by is_active(${is_active}`);
         return true;
       }
-      console.log('AdminGuard, canActivate');
-      
+
       const req = context.switchToHttp().getRequest();
       const authHeader = req.headers['authorization'];
       let user_id: string;
@@ -93,8 +89,6 @@ export function AdminGuard(is_active: boolean = true): any {
           });
           user_id = payload.user_id ?? '';
           is_admin = payload.is_admin;
-
-          console.log(`user_id: ${user_id}, is_admin: ${is_admin}`);
 
           if(!user_id ) {
           throw new UnauthorizedException('관리자 인증이 필요합니다.');

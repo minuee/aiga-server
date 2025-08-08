@@ -78,7 +78,6 @@ export class UsersService {
     //   updatedAt: new Date(),
     // };
     const data = updateUserDto;
-    console.log('data:', data);
 
     return this.prismaService.user.update({
       where: {
@@ -93,7 +92,6 @@ export class UsersService {
     const data = {
       agreement: true,
     };
-    console.log('agreement data:', data);
 
     return this.prismaService.user.update({
       where: {

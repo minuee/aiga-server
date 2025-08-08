@@ -22,7 +22,7 @@ export class ChatService {
       const result: { restricted_time: number }[] = await this.prismaService.$queryRaw`
       SELECT 
         restricted_time
-      FROM user 
+      FROM tb_user 
       WHERE user_id = ${user_id}
       `;
 
@@ -56,14 +56,12 @@ export class ChatService {
     const question = createChatDto.question;
     
     const chat_url = `http://${process.env.LLM_SERVER_HOST}:${process.env.LLM_SERVER_PORT}/chat/start`;
-    console.log('chat_url:', chat_url);
 
     // llm-server로 질의 요청
     const res = await axios.post(chat_url, {
       session_id: session_id,
       message: question
     });
-    console.log('res:', res);
 
     let chat_id;
     const chat_type = res.data.chat_type;
@@ -76,35 +74,40 @@ export class ChatService {
     if( chat_type == 'recommand_doctor' || chat_type == 'search_doctor' ) {
       for(const doctor of answer.doctors) {
         const doctor_id = doctor.doctor_id;
-        const reviews = await this.prismaService.review.findMany({
-          where: {
-            doctor_id: doctor_id
-          },
-          include: {
-            user: {
-              select: {
-                nickname: true,
-                unregist_date: true
+        try{
+          const reviews = await this.prismaService.review.findMany({
+            where: {
+              doctor_id: doctor_id
+            },
+            include: {
+              user: {
+                select: {
+                  nickname: true,
+                  unregist_date: true
+                }
               }
+            },
+            orderBy: {
+              createAt: 'desc'
             }
-          },
-          orderBy: {
-            createAt: 'desc'
-          }
-        });
+          });
 
-        // review 데이터 처리: 
-        // 1. user.unregist_date가 있으면 nickname을 '비회원'으로 덮어쓰기
-        // 2. user.nickname이 있으면 nickname을 덮어쓰고
-        const processedReviews = reviews.map(review => {
-          const { user, ...reviewWithoutUser } = review;
-          if (user) {
-            reviewWithoutUser.nickname = user.unregist_date ? '비회원' : user.nickname;
-          }         
-          return reviewWithoutUser;
-        });
+          // review 데이터 처리: 
+          // 1. user.unregist_date가 있으면 nickname을 '비회원'으로 덮어쓰기
+          // 2. user.nickname이 있으면 nickname을 덮어쓰고
+          const processedReviews = reviews.map(review => {
+            const { user, ...reviewWithoutUser } = review;
+            if (user) {
+              reviewWithoutUser.nickname = user.unregist_date ? '비회원' : user.nickname;
+            }         
+            return reviewWithoutUser;
+          });
 
-        doctor.review = processedReviews;
+          doctor.review = processedReviews;
+        }catch(e:any) {
+          console.log("eee",e)
+          doctor.review = [];
+        }
       }
     }
     
@@ -124,20 +127,20 @@ export class ChatService {
         throw new NotFoundException('세션이 존재하지 않습니다.');
       }
 
-      // 24시간 동안 사용된 토큰 수 조회
+      // 24시간 동안 사용된 토큰 수 조회 쿼리 수정 2025.08.01 By Noh.SN
       const result_old: { total_tokens: number }[] = await this.prismaService.$queryRaw`
         SELECT 
           IFNULL(SUM(IFNULL(used_token, 0)), 0) as total_tokens
-        FROM chatting 
+        FROM tb_chatting 
         WHERE user_id = ${user_id}
         AND question_time >= UTC_TIMESTAMP() - INTERVAL 24 HOUR
       `;
 
       const result: { total_tokens: number }[] = await this.prismaService.$queryRaw`
-        SELECT SUM(used_token)
+        SELECT COALESCE(SUM(t.used_token), 0) as total_tokens
         FROM (
             SELECT used_token
-            FROM chatting
+            FROM tb_chatting
             WHERE user_id = ${user_id} AND question_time >= UTC_TIMESTAMP() - INTERVAL 24 HOUR
         ) AS t;
       `;
@@ -145,12 +148,8 @@ export class ChatService {
       // 24시간 동안 누적된 토큰 수
       // in24_used_token = result[0]?.total_tokens ?? 0;
       in24_used_token = parseInt(result[0]?.total_tokens?.toString() ?? '0');
-      // console.log(`in24_used_token: ${typeof in24_used_token}, usedToken: ${typeof used_token}`);
 
       in24_used_token += used_token;
-
-      console.log(`user_id: ${user_id}, usedToken: ${used_token}, in24_used_token: ${in24_used_token}`);
-
       // 최대 토큰 초과 여부 파악
       if(in24_used_token > USER_MAX_TOKEN) {
 
@@ -158,7 +157,7 @@ export class ChatService {
         const restricted_time = Date.now() + (16 * 60 * 60 * 1000);
 
         const temp = await this.prismaService.$queryRaw`
-        UPDATE user SET
+        UPDATE tb_user SET
           restricted_time = ${restricted_time}
         WHERE user_id = ${user_id}
         `;
@@ -178,7 +177,7 @@ export class ChatService {
         // 세션 제목 설정
         await this.prismaService.session.update({
           where: { session_id: session_id },
-          data: { title: question }
+          data: {  title: question }
         });
       }
 
@@ -195,6 +194,13 @@ export class ChatService {
         },
       });
       chat_id = chat.chat_id;
+
+      // 무조건 세션 업데이트일자를 수정해준다 맨앞으로 오게
+      await this.prismaService.session.update({
+        where: { session_id: session_id },
+        data: {  updateAt: new Date() }
+      });
+
     }
     else { // 비회원
       const guest_id = user_id;

@@ -18,8 +18,6 @@ async function get_address_info(addresses) {
         Authorization: `KakaoAK ${process.env.KAKAO_REST_API_KEY}`,
       },
     });
-    // console.log(response.data);
-
     if(response.data.documents.length === 0) {
       console.log(`${name} ${addr} 주소 정보를 찾을 수 없습니다.`);
       continue;
@@ -42,7 +40,6 @@ async function main() {
   // const data = address_aiga.split("\n").splice(0, 1);
   const data = address_aiga.split("\n");
   const source = await get_address_info(data);
-  console.log(source);
 
   const target = address_aiga2025.split("\n");
   for (let i = 0; i < target.length; i++) {
@@ -63,13 +60,9 @@ async function main() {
         lat: found.lat,
         lon: found.lon,
       };
-      console.log('new_address:', address);
       const result = await select("update hospital set address=?, lat=?, lon=? where hid = ?", [address.addr, address.lat, address.lon, address.hid]);
-      console.log(result);
     }
   } 
-
-
   await close();
 } 
 

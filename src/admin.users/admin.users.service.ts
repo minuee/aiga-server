@@ -37,7 +37,6 @@ export class AdminUsersService {
   }
 
   async findOne(user_id: string) : Promise<User | null> {
-    console.log('user_id:', user_id);
     return this.prismaService.user.findUnique({
       where: {
         user_id,
@@ -75,7 +74,6 @@ export class AdminUsersService {
       nickname: updateUserDto.nickname,
       profile_img: updateUserDto.profile_img,
     };
-    console.log('data:', data);
 
     return this.prismaService.user.update({
       where: {

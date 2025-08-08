@@ -18,8 +18,6 @@ export class OpinionService {
       memo: createOpinionDto.memo,
     };
 
-    console.log('data:', data);
-
     return await this.prismaService.opinion.create({
       data
     });

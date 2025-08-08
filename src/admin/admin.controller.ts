@@ -19,7 +19,6 @@ export class AdminController {
 
   makeRefreshCookie(refreshToken: string) {
     const refresh_token_expiration = parseInt(process.env.REFRESH_TOKEN_EXPIRATION || '7');
-    // console.log('refresh_token_expiration:', refresh_token_expiration);
    
     const sec_of_day = 1000 * 60 * 60 * 24;
     const refresh_cookie = {
@@ -43,14 +42,10 @@ export class AdminController {
 
     const payload = {
       user_id : admin.admin_id,
-      // sns_type,
-      // sns_id
       is_admin : true,
     };
     const tokens = await this.authService.generateTokens(payload);
-
     const refresh_cookie = this.makeRefreshCookie(tokens.refreshToken);
-    console.log('refresh_cookie:', refresh_cookie);
 
     return {
       data: {
@@ -104,9 +99,7 @@ export class AdminController {
       is_admin : true,
     };
     const tokens = await this.authService.generateTokens(payload);
-
     const refresh_cookie = this.makeRefreshCookie(tokens.refreshToken);
-    console.log('refresh_cookie:', refresh_cookie);
 
     return {
       data: {

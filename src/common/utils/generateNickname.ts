@@ -267,25 +267,3 @@ export const generateDetailedHealthNickname = (
 
 // 기본 export
 export default HealthNicknameGenerator;
-
-// 사용 예시 (주석 처리)
-/*
-console.log('=== 단일 닉네임 생성 ===');
-console.log(generateHealthNickname());
-console.log(generateHealthNickname('user123')); // 동일한 userId면 같은 결과
-
-console.log('\n=== 여러 후보 생성 ===');
-console.log(generateHealthNicknameCandidates(5));
-
-console.log('\n=== 중복 체크 및 대안 생성 ===');
-const existingNicknames = ['건강한 나무', '밝은 꽃', '튼튼한 새싹'];
-console.log('중복 체크 후:', generateUniqueHealthNickname(existingNicknames, 'user123'));
-
-console.log('\n=== 상세 정보와 함께 생성 ===');
-console.log(generateDetailedHealthNickname({ pattern: 'full', userId: 'user456' }));
-
-console.log('\n=== 클래스 인스턴스 사용 ===');
-const generator = new HealthNicknameGenerator();
-console.log(generator.generate({ pattern: 'simple' }));
-console.log(generator.generateDetailed({ pattern: 'color', userId: 'user789' }));
-*/

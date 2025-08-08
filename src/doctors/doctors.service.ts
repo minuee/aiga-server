@@ -21,14 +21,12 @@ export class DoctorsService {
     const session_id = createDoctorDto.session_id;
 
     const chat_url = `http://${process.env.LLM_SERVER_HOST}:${process.env.LLM_SERVER_PORT}/chat/doctor`;
-    console.log('chat_url:', chat_url);
 
     // llm-server로 질의 요청
     const res = await axios.post(chat_url, {
       session_id: session_id,
       message: `doctor_id: ${doctor_id}`
     });
-    // console.log('res:', res);
 
     // 응답에 review 추가
     let doctor = res.data.doctors?.[0];
@@ -76,7 +74,6 @@ export class DoctorsService {
   //     content: updateDoctorDto.content,
   //   };
 
-  //   console.log('data:', data);
 
   //   return await this.prismaService.opinion.create({
   //     data

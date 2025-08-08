@@ -24,6 +24,7 @@ async function bootstrap() {
         'http://localhost:3000',
         'http://localhost:5000',
         'http://localhost:5001',
+        'http://localhost:6001',
         'http://192.168.0.177:3000',
         'http://192.168.0.180:3000',
         'https://aigadev.kormedi.com',
@@ -47,6 +48,8 @@ async function bootstrap() {
   // 커스텀 로거를 주입하여 예외 필터 설정
   app.useGlobalFilters(new AllExceptionsFilter(customLogger));
 
+
+
   // app.useGlobalInterceptors(new UserIdInterceptor(new JwtService()));
 
   app.useGlobalInterceptors(new ResponseTransformInterceptor(new Reflector()));
@@ -55,6 +58,9 @@ async function bootstrap() {
 
   const swaggerUser = process.env.SWAGGER_USER || 'admin';
   const swaggerPass = process.env.SWAGGER_PASS || 'password123';
+  console.log("NODE_ENV",process.env.NODE_ENV)
+  console.log("swaggerUser",process.env.SWAGGER_USER)
+  console.log("swaggerPass",process.env.SWAGGER_PASS)
   app.use(
     ['/api/doc', '/api/doc-json'], // Swagger 경로들
     expressBasicAuth({

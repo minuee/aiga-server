@@ -23,7 +23,6 @@ export class AdminOpinionService {
   }
 
   async findOne(opinion_id: number) : Promise<Opinion | null> {
-    console.log('opinion_id:', opinion_id);
     return this.prismaService.opinion.findUnique({
       where: {
         opinion_id,

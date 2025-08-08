@@ -8,7 +8,7 @@ import { UpdateNoticeDto } from 'src/notice/dto/update-notice.dto';
 import { ApiBearerAuth } from '@nestjs/swagger';
 
 @ApiBearerAuth()
-@UseGuards(AdminGuard)
+// @UseGuards(AdminGuard)
 @Controller('admin/notice')
 export class AdminNoticeController {
   constructor(private readonly noticeService: AdminNoticeService) {}

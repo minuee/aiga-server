@@ -20,6 +20,7 @@ export class SessionService {
         data: {
           session_id: session_id,
           user_id: user_id,
+          updateAt: new Date()
         },
       });
     }

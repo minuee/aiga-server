@@ -4,7 +4,7 @@ import { CreateAuthDto } from './dto/create-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import { Request, Response } from 'express';
 import { JwtService } from '@nestjs/jwt';
-import { v4 as uuidv4 } from 'uuid';
+import { CryptoUtil } from 'src/common/utils/crypto.util';
 import { ResponseMesssage, SkipResponseTransform } from 'src/common/decorators/response-message-decorator';
 import { UsersService } from 'src/users/users.service';
 import { UserGuard } from 'src/common/guards/user.guard';
@@ -58,9 +58,6 @@ export class AuthController {
   async logout(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
 
     const refreshToken = req.cookies['refresh_token'];
-
-    console.log('refreshToken', refreshToken);
-
     let user_id = req.user_id;
 
     if (!refreshToken ) {
@@ -104,8 +101,6 @@ export class AuthController {
 
     const { accessToken, userInfo } = await this.authService.getTokensAndUserInfo(provider, code);
 
-    console.log('userInfo:',provider, userInfo);
-
     const sns_id = String(userInfo.id);
     const sns_type = provider;
     
@@ -127,8 +122,6 @@ export class AuthController {
       nickname = `${nickname_raw}-${Math.floor(Math.random() * 1000000)}`;
     }
 
-    console.log('nickname:', nickname);
-
     const userBasic = {
       user_id:"",
       sns_type, 
@@ -141,17 +134,16 @@ export class AuthController {
 
     // sns 유저 검색후, 갱신/저장
     const foundUser = await this.usersService.findBySns(sns_type, sns_id);
-    console.log('foundUser:', foundUser);
-    let user;
-    if (foundUser) {  // 기존 유저
 
+    let user;
+    let returnUserBasic;
+    if (foundUser) {  // 기존 유저
       // 탈퇴일(unregist_date)이 있고, 24시간이 경과되지 않았으면 가입 불가   
       if(foundUser.unregist_date) {
         const unregist_date = new Date(foundUser.unregist_date);
         const now = new Date();
         const diffTime = Math.abs(now.getTime() - unregist_date.getTime());
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        console.log('diffDays:', diffDays);
         if(diffDays < parseInt(process.env.REJOIN_BLOCK_PERIOD || '24')) {
           throw new UnauthorizedException('탈퇴한 유저입니다. 24시간 후에 다시 로그인하세요');
         }
@@ -178,12 +170,29 @@ export class AuthController {
         updatedAt: new Date(),
         agreement
       }
+      const decryptedEmail = CryptoUtil.decrypt(email); // your custom function
+      const decryptedProfileImg = CryptoUtil.decrypt(profile_img); // your custom function
+      returnUserBasic = {
+        ...user,
+        email : decryptedEmail,
+        profile_img : decryptedProfileImg,
+      }
       await this.usersService.update(user_id, user);
+    }else {  // 신규 유저
+      const encryptedEmail = CryptoUtil.encrypt(email); // your custom function
+      const encryptedProfileImg = CryptoUtil.encrypt(profile_img); // your custom function
+      returnUserBasic = {
+        ...userBasic,
+        email,
+        profile_img
+      }
+      const userBasicReform = {
+        ...userBasic,
+        email : encryptedEmail,
+        profile_img : encryptedProfileImg,
+      }
+      user = await this.usersService.create(userBasicReform);
     }
-    else {  // 신규 유저
-      user = await this.usersService.create(userBasic);
-    }
-    console.log('user:', user);
 
     const payload = {
       user_id: user.user_id,
@@ -201,7 +210,6 @@ export class AuthController {
     // });
 
     const refresh_token_expiration = parseInt(process.env.REFRESH_TOKEN_EXPIRATION || '7');
-    // console.log('refresh_token_expiration:', refresh_token_expiration);
 
     const sec_of_day = 1000 * 60 * 60 * 24;
     const refresh_token = {
@@ -217,12 +225,16 @@ export class AuthController {
 
     res.cookie('refresh_token', refresh_token.value, refresh_token.options);
 
+    const userReform = {
+      ...returnUserBasic,
+      user_id : user.user_id,
+    }
   
     const result =  {
       statusCode: 200,
       message: "성공적으로 로그인 인증이 완료되었습니다.",
       data: {
-        user,
+        user : userReform,
         access_token: tokens.accessToken,  
       }
     };
@@ -241,8 +253,6 @@ export class AuthController {
 </body>
 </html>
   `;
-
-    console.log('html:', html);
 
     res.setHeader('Content-Type', 'text/html');
     res.send(html);

@@ -16,10 +16,8 @@ export class UserGuard implements CanActivate {
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const GuardPass = this.reflector.get<boolean>('GuardPass', context.getHandler());
     if (GuardPass) {
-      console.log(`UserGuard, canActivate passed by @GuardPass`);
       return true;
     }
-    console.log('UserGuard, canActivate');
     const req = context.switchToHttp().getRequest();
     const authHeader = req.headers['authorization'];
     let user_id: string;
@@ -31,8 +29,6 @@ export class UserGuard implements CanActivate {
           secret: process.env.JWT_ACCESS_SECRET,
         });
         user_id = payload.user_id ?? '';
-
-        console.log(`user_id: ${user_id}`);
 
         if(!user_id) {
           throw new UnauthorizedException('회원 인증이 필요합니다.');

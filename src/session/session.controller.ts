@@ -16,7 +16,7 @@ export class SessionController {
 
   @Post()
   @ResponseMesssage("성공적으로 새 세션이 생성 되었습니다.")
-  async create(@Body() createSessionDto: CreateSessionDto, @Req() req: Request) {
+  async create(@Body() createSessionDto: CreateSessionDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
     
     const authHeader = req.headers['authorization'];
     let user_id: string = '';
@@ -35,26 +35,18 @@ export class SessionController {
       }
     }
 
-    console.log('user_id:', user_id);
-
     const session_id = await this.sessionService.create(user_id, createSessionDto);
 
     const sec_of_7day = 1000 * 60 * 60 * 24 * 7;
     if (!user_id) {
       const guest_id = `guest_${uuidv4()}`;
-      return {
-        data: session_id,
-        setCookie: {
-          name: 'guest_id',
-          value: guest_id,
-          options: {
-            httpOnly: true,
-            path: '/',
-            secure: false, // process.env.NODE_ENV === 'production',
-            maxAge: sec_of_7day,
-          },
-        },
-      };
+      res.cookie('guest_id', guest_id, {
+        httpOnly: true,
+        path: '/',
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: sec_of_7day,
+      });
+      return session_id;
     }
     return session_id;
   }

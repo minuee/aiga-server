@@ -21,7 +21,6 @@ export class ChatController {
 
   @Sse('stream/:user_id')
   sendEvents(@Param('user_id') user_id: string): Observable<MessageEvent> {
-    console.log(`SSE 연결됨 - User ID: ${user_id}`);
     
     // 사용자별 독립적인 Subject 생성 또는 기존 것 사용
     let userStream = this.userStreams.get(user_id);
@@ -32,7 +31,6 @@ export class ChatController {
     
     return userStream.asObservable().pipe(
       finalize(() => {
-        console.log(`SSE 연결 해제됨 - User ID: ${user_id}`);
         // 다른 연결이 없으면 Map에서 제거
         if (!userStream.observed) {
           this.userStreams.delete(user_id);
@@ -105,7 +103,6 @@ export class ChatController {
     else {
       // user_id가 없으면 guest_id를 사용
       user_id = req.cookies['guest_id'];
-      console.log('guest_id:', user_id);
       // guest_id도 없으면 예외 발생
       if(!user_id) {
         throw new UnauthorizedException('비회원, guest_id not found in cookies');
@@ -119,7 +116,6 @@ export class ChatController {
   @ResponseMesssage("성공적으로 질의 요청이 처리되었습니다.")
   async create(@Param('session_id') session_id: string, @Body() createChatDto: CreateChatDto, @Req() req: Request) {
     const user_id = await this.getUserId(req);
-    console.log('user_id:', user_id);
 
     const result = await this.chatService.create(user_id, session_id, createChatDto);
     
@@ -151,7 +147,6 @@ export class ChatController {
   @ResponseMesssage("성공적으로 질의 요청이 취소되었습니다.")
   async remove(@Param('session_id') session_id: string, @Req() req: Request) {
     const user_id = await this.getUserId(req);
-    console.log('user_id:', user_id);
 
     const result = await this.chatService.remove(user_id, session_id);
     return result;

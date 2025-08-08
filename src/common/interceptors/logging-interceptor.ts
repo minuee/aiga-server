@@ -30,20 +30,6 @@ export class LoggingInterceptor implements NestInterceptor {
     const { method, originalUrl, params, query, body, ip, headers } = req;
     const userAgent = headers['user-agent'] || '';
 
-    // 기존 console.log 유지 (개발 편의성)
-    // console.log(`[Request] ${method} ${originalUrl}`);
-    // console.log(`Params: ${JSON.stringify(params)}`);
-    // console.log(`Query: ${JSON.stringify(query)}`);
-    // if(run_mode !== 'prod' && body !== undefined) {
-    //   console.log(`Body: ${JSON.stringify(body, null, 2)}`);
-    // }
-    // const params = JSON.stringify(params);
-    // const query = JSON.stringify(query);
-    // let body = ''
-    // if(run_mode !== 'prod' && body !== undefined) {
-    //   body = JSON.stringify(body, null, 2);
-    // }
-
     const req_body = JSON.stringify(body, null, 2);
 
     // 커스텀 로거로 HTTP 요청 로깅
@@ -66,8 +52,6 @@ export class LoggingInterceptor implements NestInterceptor {
           const statusCode = res.statusCode;
           const message = res.statusMessage || statusMessages[statusCode] || '';
           
-          // 기존 console.log 유지 (개발 편의성)
-          // console.log(`[Response] ${statusCode} ${message} (${responseTime}ms)`);
           let res_body = ''
           if(run_mode !== 'prod') {
             res_body = JSON.stringify(data, null, 2);
@@ -82,7 +66,6 @@ export class LoggingInterceptor implements NestInterceptor {
             this.customLogger.log(res_body, 'HTTP Response body');
           }
           
-          console.log('----------------------------------------------------------------');
         }),
       );
   }

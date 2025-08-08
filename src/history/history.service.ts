@@ -19,6 +19,7 @@ export class HistoryService {
       user_id: string;
       session_id: string;
       session_time: Date | null;
+      updateAt: Date | null;
       title: string | null;
       chattings: Chatting[];
     };
@@ -30,17 +31,22 @@ export class HistoryService {
     // return `This action returns all history`;
     const sessions: Session[] = await this.prismaService.session.findMany({
       where: {
-        user_id
+        user_id,
+        title: {
+          not: null
+        }
       },
-      orderBy: {
-        session_time: 'desc'
-      }
+      orderBy: [
+        { updateAt: 'desc' },
+        { session_time: 'desc' }
+      ]
     });
 
     for (const session of sessions) {
       const session_id: string = session.session_id;
       const title: string | null = session.title;
       const session_time: Date | null = session.session_time;
+      const updateAt: Date | null = session.updateAt;
 
       let chattings: Chatting[] = [];
       /* 
@@ -58,6 +64,7 @@ export class HistoryService {
           session_id,
           title,
           session_time,
+          updateAt,
           chattings
         });
       //}
@@ -96,8 +103,8 @@ export class HistoryService {
 
     const data = {
       title: updateHistoryDto.title,
+      updateAt: new Date()
     };
-    console.log('data:', data);
 
     return this.prismaService.session.update({
       where: {

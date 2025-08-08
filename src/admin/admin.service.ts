@@ -12,14 +12,12 @@ export class AdminService {
 
   async create(createAdminDto: CreateAdminDto): Promise<Admin> {
 
-    let aid = createAdminDto.admin_id ? 
-                createAdminDto.admin_id : `aid_${uuidv4()}`;
+    let aid = createAdminDto.admin_id ? createAdminDto.admin_id : `aid_${uuidv4()}`;
 
     const data = {
       ...createAdminDto,
       admin_id: aid,
     };
-    // console.log(data);
 
     return await this.prismaService.admin.create({
       data
@@ -44,7 +42,6 @@ export class AdminService {
 
   async update(admin_id: string, updateAdminDto: UpdateAdminDto) : Promise<Admin | null> {
     const data = {...updateAdminDto};
-    console.log(data);
 
     return this.prismaService.admin.update({
       where: {

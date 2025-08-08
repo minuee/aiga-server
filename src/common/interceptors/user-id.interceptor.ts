@@ -7,7 +7,6 @@ export class UserIdInterceptor implements NestInterceptor {
   constructor(private readonly jwtService: JwtService) {}
 
   async intercept(context: ExecutionContext, next: CallHandler): Promise<Observable<any>> {
-    console.log('UserIdInterceptor');
     const req = context.switchToHttp().getRequest();
     const authHeader = req.headers['authorization'];
     let user_id: string | undefined = undefined;
@@ -29,9 +28,6 @@ export class UserIdInterceptor implements NestInterceptor {
 
     req.user_id = user_id; // 모든 컨트롤러에서 req.user_id로 접근 가능
     req.is_admin = is_admin; // 모든 컨트롤러에서 req.is_admin로 접근 가능
-
-    console.log(`req.user_id: ${req.user_id}, req.is_admin: ${req.is_admin}`);
-
     return next.handle();
   }
 }

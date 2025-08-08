@@ -35,8 +35,6 @@ export class UsersController {
 
     const user_id = req.user_id ?? '';
 
-    console.log('user_id:', user_id);
-
     const foundUser = await this.usersService.findOne(user_id);
 
     if (!foundUser) {
@@ -46,7 +44,6 @@ export class UsersController {
 
     // logout 처리
     const refreshToken = req.cookies['refresh_token'];
-    console.log('refreshToken', refreshToken);
     // 쿠키 삭제
     res.clearCookie('refresh_token', { path: '/' });
 
@@ -71,8 +68,6 @@ export class UsersController {
   async changNickname(@Body() updateUserDto: UpdateUserDto, @Req() req: Request) {
 
     const user_id = req.user_id ?? '';
-
-    console.log('user_id:', user_id);
 
     const foundUser = await this.usersService.findOne(user_id);
 
@@ -101,8 +96,6 @@ export class UsersController {
   async agreement(@Req() req: Request) {
 
     const user_id = req.user_id ?? '';
-
-    console.log('user_id:', user_id);
 
     const result = await this.usersService.agreement(user_id);
     return {

@@ -29,21 +29,21 @@ model User {
   chattings Chatting[] 
   reviews   Review[]
   opinions  Opinion[]
-  @@map("user")
+  @@map("tb_user")
 }
 
 model Session {
   session_id    String    @id
   user_id       String
   session_time  DateTime? @default(now())
-  title         String?   @db.VarChar(1024)
+  title         String?   @db.VarChar(191)
   createAt      DateTime? @default(now())
   updateAt      DateTime?
   // Relations
   user          User      @relation(fields: [user_id], references: [user_id])
   chattings     Chatting[]
 
-  @@map("session")
+  @@map("tb_session")
 }
 
 model Chatting {
@@ -51,9 +51,9 @@ model Chatting {
   user_id        String
   session_id     String
   chat_type      String?
-  question       String    @db.VarChar(4096)
+  question       String    @db.Text
   question_time  DateTime? @default(now()) 
-  summary        String    @db.VarChar(4096) @default("") 
+  summary        String    @db.Text @default("") 
   answer         String?   @db.Text
   answer_time    DateTime?   @default(now())
   used_token     Int?
@@ -64,7 +64,7 @@ model Chatting {
   session        Session   @relation(fields: [session_id], references: [session_id])
 
   @@index([user_id, session_id], name: "session_idx")
-  @@map("chatting")
+  @@map("tb_chatting")
 }
 
 model Review {
@@ -87,7 +87,7 @@ model Review {
 
   @@index([doctor_id], name: "user_review_idx1")
   @@index([user_id, doctor_id], name: "user_review_idx2")
-  @@map("review")
+  @@map("tb_review")
 }
 
 model Opinion {
@@ -95,8 +95,8 @@ model Opinion {
   user_id       String
   opinion_type  Int?      @default(0)
   doctor_id     Int?
-  title         String?   @db.VarChar(1024)
-  content       String?   @db.VarChar(4096)
+  title         String?   @db.VarChar(191)
+  content       String?   @db.Text
   memo          String?   @db.Text
   createAt      DateTime? @default(now())
   updateAt      DateTime?
@@ -105,28 +105,30 @@ model Opinion {
   user          User      @relation(fields: [user_id], references: [user_id])
 
   @@index([user_id], name: "customer_opinion_idx1")
-  @@map("opinion")
+  @@map("tb_opinion")
 }
 
 model Notice {
   notice_id Int      @id @default(autoincrement())
-  title     String?  @db.VarChar(200)
+  title     String?  @db.VarChar(191)
   content   String?  @db.Text
   is_active Boolean  @default(true) @db.TinyInt
   createAt  DateTime @default(now())
   updateAt  DateTime? @db.DateTime
+  open_date String?  @db.Char(10)
+  writer     String?  @db.VarChar(10)
 
-  @@map("notice")
+  @@map("tb_notice")
 }
 
 model Admin {
   admin_id    String   @id
-  name        String?  @db.VarChar(1024)
-  description String?  @db.Text
+  name        String?  @db.VarChar(20)
+  description String?  @db.VarChar(100)
   parent_id   String?     
   is_active   Boolean  @default(true) @db.TinyInt
   createAt    DateTime @default(now())
   updateAt    DateTime? @db.DateTime
 
-  @@map("admin")
+  @@map("tb_admin")
 }

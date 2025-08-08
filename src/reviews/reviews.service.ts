@@ -35,64 +35,71 @@ export class ReviewsService {
   }
 
   async findAll(doctor_id: number) : Promise<Review[]> {
-
-    const reviews = await this.prismaService.review.findMany({
-      where: {
-        doctor_id,
-      },
-      include: {
-        user: {
-          select: {
-            nickname: true,
-            unregist_date: true
+    try{
+      const reviews = await this.prismaService.review.findMany({
+        where: {
+          doctor_id,
+        },
+        include: {
+          user: {
+            select: {
+              nickname: true,
+              unregist_date: true
+            }
           }
+        },
+        orderBy: {
+          createAt: 'desc'
         }
-      },
-      orderBy: {
-        createAt: 'desc'
-      }
-    });
-    // review 데이터 처리: 
-    // 1. user.unregist_date가 있으면 nickname을 '비회원'으로 덮어쓰기
-    // 2. user.nickname이 있으면 nickname을 덮어쓰고
-    const processedReviews = reviews.map(review => {
-      const { user, ...reviewWithoutUser } = review;
-      if (user) {
-        reviewWithoutUser.nickname = user.unregist_date ? '비회원' : user.nickname;
-      }
-      
-      return reviewWithoutUser;
-    });
+      });
+      // review 데이터 처리: 
+      // 1. user.unregist_date가 있으면 nickname을 '비회원'으로 덮어쓰기
+      // 2. user.nickname이 있으면 nickname을 덮어쓰고
+      const processedReviews = reviews.map(review => {
+        const { user, ...reviewWithoutUser } = review;
+        if (user) {
+          reviewWithoutUser.nickname = user.unregist_date ? '비회원' : user.nickname;
+        }
+        
+        return reviewWithoutUser;
+      });
 
-    return processedReviews;
+      return processedReviews;
+    }catch(e:any) {
+      return [];
+    }
   }
 
   async findOne(review_id: number) : Promise<Review | null> {
-    const review = await this.prismaService.review.findUnique({
-      where: {
-        review_id,
-      },
-      include: {
-        user: {
-          select: {
-            nickname: true,
-            unregist_date: true
+    try{
+      const review = await this.prismaService.review.findUnique({
+        where: {
+          review_id,
+        },
+        include: {
+          user: {
+            select: {
+              nickname: true,
+              unregist_date: true
+            }
           }
-        }
-      },
-    });
+        },
+      });
 
-    if (!review) {
+      if (!review) {
+        return null;
+      }
+
+      const { user, ...reviewWithoutUser } = review;
+      // user.nickname이 존재하면 review.nickname을 덮어쓰기
+      if (user) {
+        reviewWithoutUser.nickname = user.unregist_date ? '비회원' : user.nickname;
+      }
+
+      return reviewWithoutUser;
+    }catch(e:any) {
       return null;
     }
-
-    const { user, ...reviewWithoutUser } = review;
-    // user.nickname이 존재하면 review.nickname을 덮어쓰기
-    if (user) {
-      reviewWithoutUser.nickname = user.unregist_date ? '비회원' : user.nickname;
-    }
-
-    return reviewWithoutUser;
   }
 
   async update(review_id: number, updateReviewDto: UpdateReviewDto) : Promise<Review | null> {
@@ -105,7 +112,6 @@ export class ReviewsService {
       satisfaction_score: updateReviewDto.satisfaction_score,
       recommand_score: updateReviewDto.recommand_score,
     };
-    console.log('data:', data);
 
     return this.prismaService.review.update({
       where: {

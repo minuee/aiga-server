@@ -19,17 +19,11 @@ export class CustomLoggerService implements LoggerService {
     }
 
     // 디버깅: 로그 디렉토리 정보 출력
-    console.log(`[Logger] Log directory: ${logDir}`);
-    console.log(`[Logger] Directory exists: ${fs.existsSync(logDir)}`);
     try {
       fs.accessSync(logDir, fs.constants.W_OK);
-      console.log(`[Logger] Directory writable: Yes`);
     } catch (error) {
       console.log(`[Logger] Directory writable: No - ${error.message}`);
     }
-    console.log(`[Logger] NODE_ENV: ${process.env.NODE_ENV}`);
-    console.log(`[Logger] LOG_LEVEL: ${process.env.LOG_LEVEL || 'info'}`);
-
     // JSON을 예쁘게 출력하는 커스텀 포맷
     const prettyJsonFormat = winston.format.printf((info) => {
       const { level, message, timestamp, context, ...meta } = info;

@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "aiga-api-renual/.d783d12f0323bde4b896b870f84308f41948ad32-audit.json",
+    "files": [
+        {
+            "date": 1754469650989,
+            "name": "aiga-api-renual/error-2025-08-06.log",
+            "hash": "a082f71c771c6adf9a77fa2a396771ef05279f8cb33137b16c3423feff24d090"
+        },
+        {
+            "date": 1754523806938,
+            "name": "aiga-api-renual/error-2025-08-07.log",
+            "hash": "af0c82b4aecbeb1a7dbbfdbd83cdc8d6e9d6f1c34d4dc16b09e198278a8aa656"
+        },
+        {
+            "date": 1754611489764,
+            "name": "aiga-api-renual/error-2025-08-08.log",
+            "hash": "feac2d73240779d7ae37cb4e9b5fcd517f027d3d18b9108711c4ca884bef42f2"
+        }
+    ],
+    "hashType": "sha256"
+}

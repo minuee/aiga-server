@@ -1,0 +1,64 @@
+2025-08-08T06:01:53.794Z [ERROR]: 🚨 HTTP ERROR 
+Invalid `this.prismaService.review.findMany()` invocation in
+/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/reviews/reviews.service.ts:39:53
+
+  36 
+  37 async findAll(doctor_id: number) : Promise<Review[]> {
+  38 
+→ 39   const reviews = await this.prismaService.review.findMany(
+Inconsistent query result: Field user is required to return data, got `null` instead.
+{
+  "statusCode": 500,
+  "url": "/api/reviews?doctor_id=1299",
+  "ip": "127.0.0.1",
+  "stack": "PrismaClientUnknownRequestError: \nInvalid `this.prismaService.review.findMany()` invocation in\n/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/reviews/reviews.service.ts:39:53\n\n  36 \n  37 async findAll(doctor_id: number) : Promise<Review[]> {\n  38 \n→ 39   const reviews = await this.prismaService.review.findMany(\nInconsistent query result: Field user is required to return data, got `null` instead.\n    at ri.handleRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:13)\n    at ri.handleAndLogRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ri.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async l (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:862:24)\n    at async ReviewsService.findAll (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/reviews/reviews.service.ts:39:21)\n    at async ReviewsController.findAll (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/reviews/reviews.controller.ts:32:20)",
+  "type": "http_error"
+}
+2025-08-08T06:03:38.677Z [ERROR]: 🚨 HTTP ERROR 
+Invalid `this.prismaService.review.findMany()` invocation in
+/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/reviews/reviews.service.ts:39:53
+
+  36 
+  37 async findAll(doctor_id: number) : Promise<Review[]> {
+  38 
+→ 39   const reviews = await this.prismaService.review.findMany(
+Inconsistent query result: Field user is required to return data, got `null` instead.
+{
+  "statusCode": 500,
+  "url": "/api/reviews?doctor_id=1299",
+  "ip": "127.0.0.1",
+  "stack": "PrismaClientUnknownRequestError: \nInvalid `this.prismaService.review.findMany()` invocation in\n/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/reviews/reviews.service.ts:39:53\n\n  36 \n  37 async findAll(doctor_id: number) : Promise<Review[]> {\n  38 \n→ 39   const reviews = await this.prismaService.review.findMany(\nInconsistent query result: Field user is required to return data, got `null` instead.\n    at ri.handleRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:13)\n    at ri.handleAndLogRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ri.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async l (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:862:24)\n    at async ReviewsService.findAll (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/reviews/reviews.service.ts:39:21)\n    at async ReviewsController.findAll (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/reviews/reviews.controller.ts:32:20)",
+  "type": "http_error"
+}
+2025-08-08T06:04:32.488Z [ERROR]: 🚨 HTTP ERROR 
+Invalid `this.prismaService.review.findMany()` invocation in
+/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:77:57
+
+  74 if( chat_type == 'recommand_doctor' || chat_type == 'search_doctor' ) {
+  75   for(const doctor of answer.doctors) {
+  76     const doctor_id = doctor.doctor_id;
+→ 77     const reviews = await this.prismaService.review.findMany(
+Inconsistent query result: Field user is required to return data, got `null` instead.
+{
+  "statusCode": 500,
+  "url": "/api/chat/sid_1c9604c1-30a7-4251-bb62-c28f3e8fb36d",
+  "ip": "127.0.0.1",
+  "stack": "PrismaClientUnknownRequestError: \nInvalid `this.prismaService.review.findMany()` invocation in\n/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:77:57\n\n  74 if( chat_type == 'recommand_doctor' || chat_type == 'search_doctor' ) {\n  75   for(const doctor of answer.doctors) {\n  76     const doctor_id = doctor.doctor_id;\n→ 77     const reviews = await this.prismaService.review.findMany(\nInconsistent query result: Field user is required to return data, got `null` instead.\n    at ri.handleRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:13)\n    at ri.handleAndLogRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ri.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async l (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:862:24)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:77:25)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:120:20)",
+  "type": "http_error"
+}
+2025-08-08T06:07:39.285Z [ERROR]: 🚨 HTTP ERROR 
+Invalid `this.prismaService.review.findMany()` invocation in
+/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:77:57
+
+  74 if( chat_type == 'recommand_doctor' || chat_type == 'search_doctor' ) {
+  75   for(const doctor of answer.doctors) {
+  76     const doctor_id = doctor.doctor_id;
+→ 77     const reviews = await this.prismaService.review.findMany(
+Inconsistent query result: Field user is required to return data, got `null` instead.
+{
+  "statusCode": 500,
+  "url": "/api/chat/sid_1c9604c1-30a7-4251-bb62-c28f3e8fb36d",
+  "ip": "127.0.0.1",
+  "stack": "PrismaClientUnknownRequestError: \nInvalid `this.prismaService.review.findMany()` invocation in\n/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:77:57\n\n  74 if( chat_type == 'recommand_doctor' || chat_type == 'search_doctor' ) {\n  75   for(const doctor of answer.doctors) {\n  76     const doctor_id = doctor.doctor_id;\n→ 77     const reviews = await this.prismaService.review.findMany(\nInconsistent query result: Field user is required to return data, got `null` instead.\n    at ri.handleRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:13)\n    at ri.handleAndLogRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ri.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async l (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:862:24)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:77:25)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:120:20)",
+  "type": "http_error"
+}
