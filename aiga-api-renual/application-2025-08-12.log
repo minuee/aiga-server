@@ -1,0 +1,1080 @@
+2025-08-12T00:26:39.979Z [INFO]: 🚀 Logger initialized successfully
+{
+  "logDir": "aiga-api-renual",
+  "nodeEnv": "development",
+  "logLevel": "info",
+  "type": "logger_init"
+}
+2025-08-12T00:26:40.046Z [INFO]: Application started on port 5001
+2025-08-12T00:28:03.631Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/config",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:28:03.633Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1ms",
+  "statusCode": 200,
+  "responseMessage": "OK",
+  "type": "http_response"
+}
+2025-08-12T00:28:03.633Z [INFO]: {
+  "config": {
+    "user_max_token": "200000",
+    "user_retry_limit_sec": "57600",
+    "guest_max_token": "20000",
+    "guest_retry_limit_sec": "57600"
+  }
+}
+2025-08-12T00:39:01.890Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/config",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:39:01.892Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1ms",
+  "statusCode": 200,
+  "responseMessage": "OK",
+  "type": "http_response"
+}
+2025-08-12T00:39:01.893Z [INFO]: {
+  "config": {
+    "user_max_token": "200000",
+    "user_retry_limit_sec": "57600",
+    "guest_max_token": "20000",
+    "guest_retry_limit_sec": "57600"
+  }
+}
+2025-08-12T00:39:06.427Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/new_session",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:39:06.430Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:39:06.430Z [INFO]: {
+  "session_id": "sid_8feed757-e38c-4062-afc7-59f9ede16245"
+}
+2025-08-12T00:39:06.494Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "params": "{\"session_id\":\"sid_8feed757-e38c-4062-afc7-59f9ede16245\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:39:06.495Z [INFO]: {
+  "question": "최근 2주간 가슴 두근거림과 어지러움이 간헐적으로 있어 어떤 진료과를 가야 할까?"
+}
+2025-08-12T00:39:08.989Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2494ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:39:08.990Z [INFO]: {
+  "session_id": "sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "chat_type": "general",
+  "question": "최근 2주간 가슴 두근거림과 어지러움이 간헐적으로 있어 어떤 진료과를 가야 할까?",
+  "summary": "",
+  "answer": "가슴 두근거림과 어지러움은 심장이나 순환기 문제일 수 있으니, 먼저 '심장내과' 진료를 받는 것이 좋습니다. 필요 시 추가 검사를 통해 정확한 원인을 파악할 수 있습니다. 혹시 특정 병원이나 의사 추천을 원하시면 알려주세요.",
+  "used_token": 1219,
+  "in24_used_token": 1219
+}
+2025-08-12T00:39:25.967Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "params": "{\"session_id\":\"sid_8feed757-e38c-4062-afc7-59f9ede16245\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:39:25.967Z [INFO]: {
+  "question": "추천해줘"
+}
+2025-08-12T00:39:27.538Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1570ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:39:27.538Z [INFO]: {
+  "session_id": "sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "chat_type": "recommand_hospital",
+  "question": "추천해줘",
+  "summary": "최근 2주간 가슴 두근거림과 어지러움 증상으로는 심장내과 진료가 필요하며, 한양대병원, 경희대병원, 강남세브란스병원이 심장내과로 추천됩니다. 원하시면 특정 병원의 전문의 정보도 알려드릴 수 있습니다.",
+  "answer": {
+    "department": "심장내과",
+    "hospitals": [
+      {
+        "hospital_id": "H01KR-11000014",
+        "name": "한양대병원",
+        "address": "서울특별시 성동구 왕십리로 222-1 (사근동)",
+        "lat": 37.5585815432773,
+        "lon": 127.045715688792,
+        "telephone": "02-2290-8114"
+      },
+      {
+        "hospital_id": "H01KR-11000003",
+        "name": "경희대병원",
+        "address": "서울특별시 동대문구 경희대로 23 (회기동)",
+        "lat": 37.5937762050989,
+        "lon": 127.050741696591,
+        "telephone": "02-958-8114"
+      },
+      {
+        "hospital_id": "H01KR-11000009",
+        "name": "강남세브란스병원",
+        "address": "서울특별시 강남구 언주로 211, 강남세브란스병원 (도곡동)",
+        "lat": 37.4928059943729,
+        "lon": 127.04631039276,
+        "telephone": "1599-6114"
+      }
+    ]
+  },
+  "used_token": 1611,
+  "in24_used_token": 2830
+}
+2025-08-12T00:39:40.090Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "params": "{\"session_id\":\"sid_8feed757-e38c-4062-afc7-59f9ede16245\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:39:40.090Z [INFO]: {
+  "question": "각 병원 의사도 추천해줘"
+}
+2025-08-12T00:39:42.784Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2693ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:39:42.784Z [INFO]: {
+  "session_id": "sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "chat_type": "recommand_doctor",
+  "question": "각 병원 의사도 추천해줘",
+  "summary": "가슴 두근거림과 어지러움 관련하여 추천할 만한 의사는 다음과 같습니다.  \n- 어지러움 관련: 원광대병원 비뇨의학과 박승철 교수  \n- 어지러움 관련: 카톨릭대성빈센트병원 신경외과 송승윤 교수  \n가슴 두근거림 관련 의사 추천은 현재 데이터에 없습니다. 추가 문의 있으시면 알려주세요.",
+  "answer": {
+    "disease": "어지러움",
+    "hospital": "",
+    "doctors": [
+      {
+        "doctor_id": 1297,
+        "hospital": "원광대병원",
+        "address": "전라북도 익산시 무왕로 895 (신동,(신동))",
+        "lat": 35.9654888995513,
+        "lon": 126.962940572117,
+        "telephone": "1577-3773",
+        "name": "박승철",
+        "deptname": "비뇨의학과",
+        "specialties": "전립선암, 방광암, 로봇수술, 전립선 비대증",
+        "url": "https://www.wkuh.org/main/mc_medicalpart/doctorProfile.do?d_num=199",
+        "education": "[{\"period\":\"\",\"type\":\"학력\",\"action\":\"전북대학교 의과대학 졸업 (1996)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"학력\",\"action\":\"전북대학교 의학석사, 의학박사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"\",\"type\":\"경력\",\"action\":\"전북대학교병원 비뇨기과 수련 (1996~2001)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"국군철정병원 비뇨기과과장 (2002~2003)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"원광대학교병원 전임의 (2004)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"일본 규슈대학교 비뇨기종양 Fellowship Program (2005)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"원광대학교 의과대학 전임강사 (2005)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"원광대학교 의과대학 조교수 (2007)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"미국 Florida Celebration Hospital 다빈치로봇수술 연수 (2008)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"프랑스 Bordeaux, St Augustin Clinic 다빈치로봇수술 연수 (2011)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"원광대학교 의과대학 부교수 (2011)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"미국 Moores Cancer Center, University of California, San Diego 연수 (2013~2014)\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"원광대학교 의과대학 교수 (2016~현재)\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "전립선암 진료지침 / 공동 / 저서 / 엘스비어코리아 / 201411",
+          "요로상피암 진료지침 / 공동 / 저서 / 의학문화사 / 201002",
+          "Health-Related Quality of Life Changes in Prostate Cancer Patients after Radical Prostatectomy: A Longitudinal Cohort Study / 공동(참여) / CANCER RESEARCH AND TREATMENT / KOREAN CANCER ASSOCIATION / 201904",
+          "Health-Related Quality of Life, Perceived Social Support, and Depression in Disease-Free Survivors Who Underwent Curative Surgery Only for Prostate, Kidney and Bladder Cancer: Comparison among Survivors and with the General Population / 공동(참여) / CANCER RESEARCH AND TREATMENT / KOREAN CANCER ASSOCIATION / 201901",
+          "Factors that Predict Neutropenia in Korean Patients with Advanced Urothelial Cancer after Cisplatin-Based Systemic Chemotherapy / 공동(교신) / UROLOGY JOURNAL / UROL NEPHROL RES CTR-UNRC / 201807",
+          "Aspects of urinary tract infections and antimicrobial resistance in hospitalized urology patients in Asia: 10-Year results of the Global Prevalence Study of Infections in Urology (GPIU) / 공동(참여) / JOURNAL OF INFECTION AND CHEMOTHERAPY / ELSEVIER SCIENCE BV / 201804",
+          "Hand-Holding during Cystoscopy Decreases Patient Anxiety, Pain, and Dissatisfaction: A Pilot Randomized Controlled Trial / 공동(참여) / UROLOGIA INTERNATIONALIS / KARGER / 201803",
+          "Development and Validation of the Korean Version of the European Organization for Research and Treatment of Cancer Quality of Life Questionnaire for Patients with Non-muscle Invasive Bladder Cancer: EORTC QLQ-NMIBC24 / 공동(참여) / CANCER RESEARCH AND TREATMENT / KOREAN CANCER ASSOCIATION / 201801",
+          "척추 손상 환자에서 고환 종물로 오인된 거대 요도 결석과 요도루 / 공동(제1저자) / 한국산학기술학회논문지 / 한국산학기술학회 / 201712",
+          "Early dutasteride monotherapy in men with detectable serum prostate-specific antigen levels following radical prostatectomy: A prospective trial / 공동(교신) / Investigative and Clinical Urology / 대한비뇨기과학회 / 201703"
+        ],
+        "photo": "https://www.wkuh.org/main/site/board/praise_relay/getImg.do?empno=204114",
+        "doctor_score": {
+          "paper_score": 0,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 1979,
+        "hospital": "카톡릭대성빈센트병원",
+        "address": "경기도 수원시 팔달구 중부대로 93(지동)",
+        "lat": 37.278504021,
+        "lon": 127.028098137,
+        "telephone": "1577-8588",
+        "name": "송승윤",
+        "deptname": "신경외과",
+        "specialties": "뇌혈관질환 클리닉, 뇌경색, 중풍, 두통, 어지러움증, 두부외상, 일반신경외과",
+        "url": "https://www.cmcvincent.or.kr/page/doctor/207/D0001708",
+        "education": "[{\"period\":\"2005~2011\",\"type\":\"학력\",\"action\":\"동아대학교 의학 학사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"2021~현재\",\"type\":\"경력\",\"action\":\"성빈센트병원 신경외과 임상진료조교수\",\"url\":null,\"issuer\":null},{\"period\":\"2019~2021\",\"type\":\"경력\",\"action\":\"성빈센트병원 신경외과 전임의\",\"url\":null,\"issuer\":null},{\"period\":\"2018~2019\",\"type\":\"경력\",\"action\":\"국군고양병원 진료부장\",\"url\":null,\"issuer\":null},{\"period\":\"2012~2016\",\"type\":\"경력\",\"action\":\"가톨릭중앙의료원 신경외과 레지던트\",\"url\":null,\"issuer\":null},{\"period\":\"2020\",\"type\":\"경력\",\"action\":\"대한뇌혈관외과학회 동계집담회 우수발표 연제상\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Analysis of failed mechanical thrombectomy with a focus on technical reasons: Ten years of experience in a single institution",
+          "The Long-Term Functional Effect of Thrombectomy on Patients with Middle Cerebral Artery Occlusion Who Exhibit Moderate to Severe Disability",
+          "Effect on Successful Recanalization of Thrombus Length in Susceptibility- weighted Imaging in Mechanical Thrombectomy with Stentretrieval",
+          "Effectiveness and Technical Considerations of Solitaire Platinum 4×40 mm Stent Retriever in Mechanical Thrombectomy with Solumbra Technique"
+        ],
+        "photo": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0001708/profile/1",
+        "doctor_score": {
+          "paper_score": 0,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      }
+    ]
+  },
+  "used_token": 5061,
+  "in24_used_token": 7891
+}
+2025-08-12T00:40:32.769Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/config",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:40:32.770Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "0ms",
+  "statusCode": 200,
+  "responseMessage": "OK",
+  "type": "http_response"
+}
+2025-08-12T00:40:32.770Z [INFO]: {
+  "config": {
+    "user_max_token": "200000",
+    "user_retry_limit_sec": "57600",
+    "guest_max_token": "20000",
+    "guest_retry_limit_sec": "57600"
+  }
+}
+2025-08-12T00:42:10.624Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "params": "{\"session_id\":\"sid_8feed757-e38c-4062-afc7-59f9ede16245\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:42:10.624Z [INFO]: {
+  "question": "간암 수술 명의 추천"
+}
+2025-08-12T00:42:12.143Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1519ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:42:12.143Z [INFO]: {
+  "session_id": "sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "chat_type": "recommand_doctor",
+  "question": "간암 수술 명의 추천",
+  "summary": "간암 수술 명의 추천을 요청하셨으나, 현재 데이터상 간암 수술 관련 추천 의사 정보가 없습니다. 원하시면 간암 관련 전문 진료과나 병원 추천을 도와드릴까요?",
+  "answer": {
+    "disease": "간암수술",
+    "hospital": "",
+    "doctors": []
+  },
+  "used_token": 5188,
+  "in24_used_token": 13079
+}
+2025-08-12T00:42:39.649Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "params": "{\"session_id\":\"sid_8feed757-e38c-4062-afc7-59f9ede16245\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:42:39.650Z [INFO]: {
+  "question": "간암 수술 잘하는의사 추천해줘"
+}
+2025-08-12T00:42:42.276Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2626ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:42:42.276Z [INFO]: {
+  "session_id": "sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "chat_type": "general",
+  "question": "간암 수술 잘하는의사 추천해줘",
+  "summary": "",
+  "answer": "간암 수술 잘하는 의사 추천을 위해서는 '간암' 또는 '간암 수술'을 질환명으로 명확히 알려주셨는데, 현재 데이터에 해당 의사 정보가 없습니다. 간암 수술은 주로 간담췌외과나 간이식센터 전문의가 담당하니, 해당 진료과 전문의를 원하시면 알려주세요.",
+  "used_token": 5291,
+  "in24_used_token": 18370
+}
+2025-08-12T00:42:57.673Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "params": "{\"session_id\":\"sid_8feed757-e38c-4062-afc7-59f9ede16245\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:42:57.673Z [INFO]: {
+  "question": "간담췌외과 전문의를 추천해줘"
+}
+2025-08-12T00:42:59.385Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1712ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:42:59.385Z [INFO]: {
+  "session_id": "sid_8feed757-e38c-4062-afc7-59f9ede16245",
+  "chat_type": "recommand_hospital",
+  "question": "간담췌외과 전문의를 추천해줘",
+  "summary": "간담췌외과 전문의가 있는 병원으로는 세브란스병원, 서울성모병원, 강남세브란스병원, 고려대안암병원, 고려대구로병원이 추천됩니다. 특정 병원의 전문의 추천을 원하시면 알려주세요.",
+  "answer": {
+    "department": "간담췌외과",
+    "hospitals": [
+      {
+        "hospital_id": "H01KR-11000008",
+        "name": "세브란스병원",
+        "address": "서울특별시 서대문구 연세로 50-1 (신촌동)",
+        "lat": 37.563674036531,
+        "lon": 126.941917689273,
+        "telephone": "1599-1004"
+      },
+      {
+        "hospital_id": "H01KR-11000013",
+        "name": "서울성모병원",
+        "address": "서울특별시 서초구 반포대로 222 (반포동)",
+        "lat": 37.5023936158073,
+        "lon": 127.005860604348,
+        "telephone": "1588-1511"
+      },
+      {
+        "hospital_id": "H01KR-11000009",
+        "name": "강남세브란스병원",
+        "address": "서울특별시 강남구 언주로 211, 강남세브란스병원 (도곡동)",
+        "lat": 37.4928059943729,
+        "lon": 127.04631039276,
+        "telephone": "1599-6114"
+      },
+      {
+        "hospital_id": "H01KR-11000004",
+        "name": "고려대안암병원",
+        "address": "서울특별시 성북구 고려대로 73, 고려대병원 (안암동5가)",
+        "lat": 37.5873771473625,
+        "lon": 127.026248862202,
+        "telephone": "1577-0083"
+      },
+      {
+        "hospital_id": "H01KR-11000007",
+        "name": "고려대구로병원",
+        "address": "서울특별시 구로구 구로동로 148, 고려대부속구로병원 (구로동)",
+        "lat": 37.4911503253664,
+        "lon": 126.884511034177,
+        "telephone": "02-2626-1114"
+      }
+    ]
+  },
+  "used_token": 5862,
+  "in24_used_token": 24232
+}
+2025-08-12T00:43:32.807Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/auth/kakao",
+  "params": "{\"provider\":\"kakao\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:43:32.810Z [INFO]: 🔴 HTTP RESPONSE
+{
+  "responseTime": "2ms",
+  "statusCode": 302,
+  "responseMessage": "Found",
+  "type": "http_response"
+}
+2025-08-12T00:43:32.810Z [INFO]: undefined
+2025-08-12T00:43:36.314Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/auth/kakao/callback?code=818_nPHsZ0eG_WcRd00wDo6wLPScrVGYqnv7LBanC2XUOCAVVDEJCgAAAAQKFxTuAAABmJu7lBDRDLJpR7eCqA",
+  "params": "{\"provider\":\"kakao\"}",
+  "query": "{\"code\":\"818_nPHsZ0eG_WcRd00wDo6wLPScrVGYqnv7LBanC2XUOCAVVDEJCgAAAAQKFxTuAAABmJu7lBDRDLJpR7eCqA\"}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:43:36.469Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "155ms",
+  "statusCode": 200,
+  "responseMessage": "OK",
+  "type": "http_response"
+}
+2025-08-12T00:43:36.469Z [INFO]: undefined
+2025-08-12T00:48:30.851Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/new_session",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:48:30.900Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "49ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:48:30.900Z [INFO]: {
+  "session_id": "sid_87757fdf-2247-4bca-b3c9-94a5ed743d05"
+}
+2025-08-12T00:48:31.619Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "params": "{\"session_id\":\"sid_87757fdf-2247-4bca-b3c9-94a5ed743d05\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:48:31.620Z [INFO]: {
+  "question": "최근 2주간 가슴 두근거림과 어지러움이 간헐적으로 있습니다. 어떤 진료과를 가야 할까요?"
+}
+2025-08-12T00:48:34.538Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2918ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:48:34.538Z [INFO]: {
+  "session_id": "sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "chat_id": 1756,
+  "chat_type": "general",
+  "question": "최근 2주간 가슴 두근거림과 어지러움이 간헐적으로 있습니다. 어떤 진료과를 가야 할까요?",
+  "summary": "",
+  "answer": "가슴 두근거림과 어지러움 증상은 심장 관련 문제일 가능성이 있으므로, 심장내과(순환기내과)를 방문하시는 것이 좋습니다. 심장내과 전문의를 추천해 드릴까요? 아니면 병원 추천을 원하시나요?",
+  "used_token": 1212,
+  "in24_used_token": 1212
+}
+2025-08-12T00:49:14.605Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "params": "{\"session_id\":\"sid_87757fdf-2247-4bca-b3c9-94a5ed743d05\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:49:14.606Z [INFO]: {
+  "question": "추천해줘"
+}
+2025-08-12T00:49:16.372Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1766ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:49:16.372Z [INFO]: {
+  "session_id": "sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "chat_id": 1757,
+  "chat_type": "recommand_doctor",
+  "question": "추천해줘",
+  "summary": "가슴 두근거림에 대해 추천할 만한 의사가 현재 데이터에 없습니다. 가까운 대형병원 심장내과 전문의를 방문하시면 정확한 진단과 치료를 받으실 수 있습니다. 추가로 병원 추천을 원하시면 알려주세요.",
+  "answer": {
+    "disease": "가슴두근거림",
+    "hospital": "",
+    "doctors": []
+  },
+  "used_token": 1348,
+  "in24_used_token": 2560
+}
+2025-08-12T00:49:37.188Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "params": "{\"session_id\":\"sid_87757fdf-2247-4bca-b3c9-94a5ed743d05\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:49:37.189Z [INFO]: {
+  "question": "각 병원 의사도 추천해줘"
+}
+2025-08-12T00:49:38.966Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1777ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:49:38.967Z [INFO]: {
+  "session_id": "sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "chat_id": 1758,
+  "chat_type": "general",
+  "question": "각 병원 의사도 추천해줘",
+  "summary": "",
+  "answer": "가슴 두근거림 증상에 대해 병원별 심장내과 의사 추천을 위해 방문할 병원명을 알려주시면, 해당 병원의 전문의를 추천해 드리겠습니다. 어느 병원을 원하시나요?",
+  "used_token": 1414,
+  "in24_used_token": 3974
+}
+2025-08-12T00:49:54.322Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "params": "{\"session_id\":\"sid_87757fdf-2247-4bca-b3c9-94a5ed743d05\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:49:54.322Z [INFO]: {
+  "question": "간암 수술 명의 추천"
+}
+2025-08-12T00:49:55.912Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1590ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:49:55.912Z [INFO]: {
+  "session_id": "sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "chat_id": 1759,
+  "chat_type": "recommand_doctor",
+  "question": "간암 수술 명의 추천",
+  "summary": "간암 수술에 대해 추천할 만한 의사가 현재 데이터에 없습니다. 간암 수술은 간담췌외과 또는 간이식 전문의에게 상담받는 것이 좋습니다. 특정 병원이나 지역을 알려주시면 더 자세히 추천해 드릴 수 있습니다.",
+  "answer": {
+    "disease": "간암수술",
+    "hospital": "",
+    "doctors": []
+  },
+  "used_token": 1553,
+  "in24_used_token": 5527
+}
+2025-08-12T00:50:15.802Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/config",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:50:15.805Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1ms",
+  "statusCode": 200,
+  "responseMessage": "OK",
+  "type": "http_response"
+}
+2025-08-12T00:50:15.805Z [INFO]: {
+  "config": {
+    "user_max_token": "200000",
+    "user_retry_limit_sec": "57600",
+    "guest_max_token": "20000",
+    "guest_retry_limit_sec": "57600"
+  }
+}
+2025-08-12T00:50:26.941Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "params": "{\"session_id\":\"sid_87757fdf-2247-4bca-b3c9-94a5ed743d05\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:50:26.941Z [INFO]: {
+  "question": "고혈압 전문의 추천"
+}
+2025-08-12T00:50:28.994Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2053ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-08-12T00:50:28.995Z [INFO]: {
+  "session_id": "sid_87757fdf-2247-4bca-b3c9-94a5ed743d05",
+  "chat_id": 1760,
+  "chat_type": "recommand_doctor",
+  "question": "고혈압 전문의 추천",
+  "summary": "고혈압 전문의로 한림대성심병원 소아청소년과 조명현 교수님을 추천합니다. 소아신장질환과 고혈압 분야에 전문성이 있습니다. 추가 정보가 필요하시면 말씀해 주세요.",
+  "answer": {
+    "disease": "고혈압",
+    "hospital": "",
+    "doctors": [
+      {
+        "doctor_id": 1370,
+        "hospital": "한림대성심병원",
+        "address": "경기도 안양시 동안구 관평로170번길 22 (평촌동)",
+        "lat": 37.3916511965629,
+        "lon": 126.961972175812,
+        "telephone": "1577-1801",
+        "name": "조명현",
+        "deptname": "소아청소년과",
+        "specialties": "소아신장질환, 요로감염, 혈뇨, 단백뇨, 야뇨증, 고혈압",
+        "url": "https://hallym.hallym.or.kr/ptm207.asp?Doctor_Id=2180",
+        "education": "[{\"period\":\"2016.03\",\"type\":\"학력\",\"action\":\"건국대학교 대학원 박사\",\"url\":null,\"issuer\":null},{\"period\":\"2007.03 ~ 2011.02\",\"type\":\"학력\",\"action\":\"건국대학교 의학전문대학원 석사\",\"url\":null,\"issuer\":null},{\"period\":\"1997.03 ~ 2004.02\",\"type\":\"학력\",\"action\":\"서울대학교  생명과학부 학사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"2019.09 ~\",\"type\":\"경력\",\"action\":\"한림대학교성심병원 소아청소년과 조교수\",\"url\":null,\"issuer\":null},{\"period\":\"2018.12 ~ 2019.09\",\"type\":\"경력\",\"action\":\"원자력병원 소아청소년과장\",\"url\":null,\"issuer\":null},{\"period\":\"2017.03 ~ 2018.11\",\"type\":\"경력\",\"action\":\"서울대학교병원 소아신장분과 임상강사\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Asymptomatic hematuria in children: Korean Society of Pediatric Nephrology recommendations for diagnosis and management (KIDNEY RESEARCH AND CLINICAL PRACTICE)",
+          "Genotype-phenotype correlations in children with Gitelman syndrome (CLINICAL AND EXPERIMENTAL NEPHROLOGY)",
+          "Genotype-phenotype correlation of X-linked Alport syndrome observed in both genders: a multicenter study in South Korea (SCIENTIFIC REPORTS)",
+          "Environmental exposure to lead, mercury, and cadmium is not associated with abnormal kidney function in Korean adolescents (PEDIATRIC NEPHROLOGY)",
+          "Incidence of Postnatal CMV Infection among Breastfed Preterm Infants: a Systematic Review and Meta-analysis (JOURNAL OF KOREAN MEDICAL SCIENCE)",
+          "Lower albumin level and longer disease duration are risk factors of acute kidney injury in hospitalized children with nephrotic syndrome (PEDIATRIC NEPHROLOGY)<br>"
+        ],
+        "photo": "https://hallym.hallym.or.kr/CHPFile/treatment/E_20210825_12105110_b_7.png",
+        "doctor_score": {
+          "paper_score": 1,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 1147,
+        "hospital": "한림대성심병원",
+        "address": "경기도 안양시 동안구 관평로170번길 22 (평촌동)",
+        "lat": 37.3916511965629,
+        "lon": 126.961972175812,
+        "telephone": "1577-1801",
+        "name": "김광호",
+        "deptname": "피부과",
+        "specialties": "레이저, 아토피피부염, 피부암, 손발톱질환",
+        "url": "https://hallym.hallym.or.kr/ptm207.asp?Doctor_Id=37",
+        "education": "[{\"period\":\"2002 ~ 2003\",\"type\":\"학력\",\"action\":\"고려대학교 대학원 박사\",\"url\":null,\"issuer\":null},{\"period\":\"2000 ~ 2001\",\"type\":\"학력\",\"action\":\"한림대학교 대학원 석사\",\"url\":null,\"issuer\":null},{\"period\":\"1985 ~ 1991\",\"type\":\"학력\",\"action\":\"한림대학교  의과대학  학사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"2019.03 ~\",\"type\":\"경력\",\"action\":\"한림대학교성심병원 피부과 주임교수\",\"url\":null,\"issuer\":null},{\"period\":\"2016 ~\",\"type\":\"경력\",\"action\":\"한림대학교성심병원 피부과 과장\",\"url\":null,\"issuer\":null},{\"period\":\"2011.04 ~\",\"type\":\"경력\",\"action\":\"한림대학교성심병원 피부과 교수\",\"url\":null,\"issuer\":null},{\"period\":\"2008.01 ~ 2011.03\",\"type\":\"경력\",\"action\":\"한림대학교 의과대학 피부과 부교수\",\"url\":null,\"issuer\":null},{\"period\":\"2006.05 ~ 2007.12\",\"type\":\"경력\",\"action\":\"미국 컬럼비아대학 연수\",\"url\":null,\"issuer\":null},{\"period\":\"2002.05 ~ 2004.04\",\"type\":\"경력\",\"action\":\"한림대학교 의과대학 피부과 조교수\",\"url\":null,\"issuer\":null},{\"period\":\"2000.05 ~ 2002.04\",\"type\":\"경력\",\"action\":\"한림대학교 의과대학 피부과 전임강사\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Facial Skin Rejuvenation Using Poly-DL-Lactic Acid Injected With a Laser-Generated Needle-Free Microjet Injector (DERMATOLOGIC SURGERY)",
+          "Skin rejuvenation through topical application of indocyanine green with diffractive optical element mode of 785 nm picosecond laser in Asian females (JOURNAL OF COSMETIC DERMATOLOGY)",
+          "Immunohistochemical evaluation of keratins and involucrin in differentiating between palmoplantar pustulosis and pompholyx (INTERNATIONAL JOURNAL OF DERMATOLOGY)",
+          "Immunohistochemical differentiation of keratins and involucrin between palmar psoriasis, chronic hand eczema and hyperkeratotic hand eczema (CONTACT DERMATITIS)",
+          "A rare case of chordoma cutis (JOURNAL OF CUTANEOUS PATHOLOGY)",
+          "A Case of Breast Carcinoma en Cuirasse in Male (Annals of Dermatology)",
+          "Polydeoxyribonucleotide exerts opposing effects on ERK activity in human skin keratinocytes and fibroblasts (MOLECULAR MEDICINE REPORTS)",
+          "Epidemiology and survival analysis of Merkel cell carcinoma in South Korea: a nationwide, multicenter retrospective study (INTERNATIONAL JOURNAL OF DERMATOLOGY)",
+          "Treatment for Aging Skin with Multifrequency Radiofrequency (DERMATOLOGIC THERAPY)",
+          "Clinical and histopathologic features of pediatric longitudinal melanonychia: A multicenter retrospective study (JOURNAL OF THE AMERICAN ACADEMY OF DERMATOLOGY)<br>피부과학 (대한피부과학회)"
+        ],
+        "photo": "https://hallym.hallym.or.kr/CHPFile/treatment/E_20210826_12105112_b_2.png",
+        "doctor_score": {
+          "paper_score": 0.49938655683112776,
+          "patient_score": 0,
+          "public_score": 0.5,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 1368,
+        "hospital": "인하대부속병원",
+        "address": "인천광역시 중구 인항로 27-  (신흥동3가,(신흥동3가))",
+        "lat": 37.4588539721174,
+        "lon": 126.634164234522,
+        "telephone": "032-890-2114",
+        "name": "이돈행",
+        "deptname": "소화기내과",
+        "specialties": "담도, 췌장질환, 췌장암, 췌장염, 담석증, 담낭 용종",
+        "url": "https://www.inha.com/page/department/medicine/doctor/63381",
+        "education": "[{\"period\":\"2001.02\",\"type\":\"학력\",\"action\":\"연세대학교 (의학박사)\",\"url\":null,\"issuer\":null},{\"period\":\"1996.02\",\"type\":\"학력\",\"action\":\"연세대학교 (의학석사) 내과학(소화기)\",\"url\":null,\"issuer\":null},{\"period\":\"1988.02\",\"type\":\"학력\",\"action\":\"연세대학교 의학\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"2008.03 ~ 현재\",\"type\":\"경력\",\"action\":\"인하대병원 소화기내과 교수\",\"url\":null,\"issuer\":null},{\"period\":\"2013.09 ~ 2021.12\",\"type\":\"경력\",\"action\":\"인하대병원 의생명연구원장\",\"url\":null,\"issuer\":null},{\"period\":\"2008.01 ~ 2010.09\",\"type\":\"경력\",\"action\":\"인하대병원 소화기내과 분과장\",\"url\":null,\"issuer\":null},{\"period\":\"2006.01 ~ 2010.01\",\"type\":\"경력\",\"action\":\"인하대병원 임상연구센터장\",\"url\":null,\"issuer\":null},{\"period\":\"2003.03 ~ 2008.02\",\"type\":\"경력\",\"action\":\"인하대병원 소화기내과 부교수\",\"url\":null,\"issuer\":null},{\"period\":\"1996.01 ~ 2003.01\",\"type\":\"경력\",\"action\":\"인하대병원 소화기내과 조교수\",\"url\":null,\"issuer\":null},{\"period\":\"1995.01 ~ 1996.01\",\"type\":\"경력\",\"action\":\"연세대의대 내과 강사\",\"url\":null,\"issuer\":null},{\"period\":\"1992.01 ~ 1995.01\",\"type\":\"경력\",\"action\":\"국군대전병원 내과 과장\",\"url\":null,\"issuer\":null},{\"period\":\"1989.01 ~ 1992.01\",\"type\":\"경력\",\"action\":\"연세대의대 신촌세브란스병원 내과전공의과정 수료\",\"url\":null,\"issuer\":null},{\"period\":\"1988.01 ~ 1989.01\",\"type\":\"경력\",\"action\":\"연세대의대 신촌세브란스병원 인턴과정 수료\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Effects of mitomycin-eluting metal stents on benign biliary stricture in a swine model: A feasibility study, DIGESTIVE ENDOSCOPY 2018;30(6):797-798",
+          "Prospective Multicenter Study of the Challenges Inherent in Using Large Cell-Type Stents for Bilateral Stent-in-Stent Placement in Patients with Inoperable Malignant Hilar Biliary Obstruction, GUT AND LIVER 2018;12(6):722-727",
+          "Feasibility Study of Cylindrically Diffusing 532 nm Wavelength for Treatment of Pancreatic Cancer, JOURNAL OF THE KOREAN PHYSICAL SOCIETY 2018;73(11):1619-1624",
+          "Remaining hepatocellular carcinoma risk in chronic hepatitis B patients receiving entecavir/tenofovir in South Korea, HEPATOLOGY RESEARCH 2018;48(11):862-871",
+          "Antitumor effect of the paclitaxel-eluting membrane in a mouse model, ONCOLOGY LETTERS 2018;16(4):4537-4542",
+          "Ramalin, an antioxidant compound derived from Antarctic lichen, prevents progression of liver fibrosis induced by dimethylnitrosamine (DNM) in rats, BIOCHEMICAL AND BIOPHYSICAL RESEARCH COMMUNICATIONS 2018;504(1):25-33",
+          "Comparison of two porcine benign esophageal stricture models using radiofrequency ablation and endoscopic submucosal tunnel dissection, TURKISH JOURNAL OF GASTROENTEROLOGY 2018;29(4):502-508",
+          "Fabrication of Eudragit polymeric nanoparticles using ultrasonic nebulization method for enhanced oral absorption of megestrol acetate, PHARMACEUTICAL DEVELOPMENT AND TECHNOLOGY 2018;23(4):407-413",
+          "CEGP-003 Spray Has a Similar Hemostatic Effect to Epinephrine Injection in Cases of Acute Upper Gastrointestinal Bleeding, DIGESTIVE DISEASES AND SCIENCES 2018;63(11):3026-3032",
+          "Hypoxia-induced microRNA-590-5p promotes colorectal cancer progression by modulating matrix metalloproteinase activity, CANCER LETTERS 2018;416:31-41"
+        ],
+        "photo": "https://www.inha.com//assets/attach/view/doctor/63381/profile",
+        "doctor_score": {
+          "paper_score": 0.6501469970600589,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 1366,
+        "hospital": "대구카톨릭대병원",
+        "address": "대구광역시 남구 두류공원로17길 33 (대명동)",
+        "lat": 35.8441891121102,
+        "lon": 128.565825660965,
+        "telephone": "1688-0077",
+        "name": "전윤호",
+        "deptname": "심장혈관흉부외과",
+        "specialties": "로봇수술, 흉강경 수술, 폐암, 흉선종, 식도암, 폐이식, 일반흉부질환",
+        "url": "https://www.dcmc.co.kr/content/01reserv/01_0103.asp?M_NUM=260546&prepage=%2Fcontent%2F01reserv%2F01%5F0102%5F02%2Easp%3Fct%5Fidx%3D2580%26prepage%3D%252Fcontent%252F01reserv%252F01%255F01%252Easp",
+        "education": "[{\"period\":\"2004. 3. ~ 2011. 2.\",\"type\":\"학력\",\"action\":\"대구가톨릭대학교 의과대학학사\",\"url\":null,\"issuer\":null},{\"period\":\"2012. 3. ~ 2025. 2.\",\"type\":\"학력\",\"action\":\"대구가톨릭대학교 의과대학 석사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"2012. 3. ~ 2016. 2.\",\"type\":\"경력\",\"action\":\"대구가톨릭대학교병원 흉부외과 전공의\",\"url\":null,\"issuer\":null},{\"period\":\"2016. 3. ~ 2019. 4.\",\"type\":\"경력\",\"action\":\"군의관\",\"url\":null,\"issuer\":null},{\"period\":\"2019. 7. ~ 2020. 2.\",\"type\":\"경력\",\"action\":\"속초의료원 응급실 과장\",\"url\":null,\"issuer\":null},{\"period\":\"2020. 3. ~ 2022. 2.\",\"type\":\"경력\",\"action\":\"서울아산병원 흉부외과 폐식도 임상강사\",\"url\":null,\"issuer\":null},{\"period\":\"현재\",\"type\":\"경력\",\"action\":\"대구가톨릭대학교병원 심장혈관흉부외과 조교수\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "The Risk Factors and Outcomes of Acute Kidney Injury after Thoracic Endovascular Aortic Repair",
+          "Successful Management of a Recurrent Primary Malignant Fibrous Histiocytoma of the Lung: Report of a Case",
+          "Solid predominant subtype as an independent risk factor for recurrence in patients with pathologic stage I lung adenocarcinoma",
+          "Surgical outcomes of 500 robot-assisted minimally invasive esophagectomies for esophageal carcinoma",
+          "Differences in Treatment Outcomes According to the Insertion Method Used in Extracorporeal Cardiopulmonary Resuscitation: A Single-Center Experience",
+          "Treatment of phlegmonous esophagitis in various patients: a case series",
+          "Two cases of Robot-Assisted Totally Minimally Invasive Esophagectomy with Colon interposition for Gastroesophageal Junction Cancer: Surgical Considerations",
+          "Long-term oncologic outcomes of robot-assisted veersus conventional open esophagectomy for esophageal cancer: Propensity-score matched analysis"
+        ],
+        "photo": "https://www.dcmc.co.krhttp://www.dcmc.co.kr/data/dr_list/전윤호 교수 흉부외과 (1).jpg",
+        "doctor_score": {
+          "paper_score": 0.3664006719865603,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 1436,
+        "hospital": "분당서울대병원",
+        "address": "경기도 성남시 분당구 구미로173번길 82 (구미동, 분당서울대학교병원)",
+        "lat": 37.3520254308069,
+        "lon": 127.124485012105,
+        "telephone": "1588-3369",
+        "name": "김기정",
+        "deptname": "신경외과",
+        "specialties": "척추 및 척수 종양, 척수 혈관기형, 후종인대골화증",
+        "url": "https://www.snubh.org/medical/drIntroduce.do?DP_TP=O&DP_CD=NS&sDpCdDtl=FM&sDrSid=1000295&sDrStfNo=65267&sDpTp=O",
+        "education": "[{\"period\":\"\",\"type\":\"학력\",\"action\":\"1991서울대학교의과대학의학과학사\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"학력\",\"action\":\"1995서울대학교의과대학신경외과학석사\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"학력\",\"action\":\"2008서울대학교의과대학신경외과학박사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"\",\"type\":\"경력\",\"action\":\"2000-2004경상대학교병원신경외과조교수\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"2004-2009분당서울대학교병원신경외과조교수\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"2010-2014분당서울대학교병원신경외과부교수\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"2010-2011피츠버그대학병원퍼거슨실험실해외연수\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"2015-현재분당서울대학교병원신경외과교수\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"경력\",\"action\":\"2020-2024분당서울대학교병원척추센터장\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Erratum: Reciprocal Changes Following Cervical Realignment Surgery.",
+          "Postoperative Gravity Line-Hip Axis Offset as a Substantial Risk Factor for Mechanical Failure After Adult Spinal Deformity Correction Surgery.",
+          "Revisiting En Bloc Resection Versus Piecemeal Resection for the Treatment of Giant Cell Tumor of the Spine.",
+          "Selection of Optimal Lower Instrumented Vertebra for Adolescent Idiopathic Scoliosis Surgery.",
+          "Surgical and Clinical Outcomes Associated With the Use of Barbed Sutures and Self-Adhering Mesh System and Polymeric Glue for Wound Closure in Multilevel or Revision Spinal Surgery: A Matched Cohort Comparative Study With Conventional Wound Closure Procedure.",
+          "Optimizing Surgical Strategy for Cervical Spinal Deformity: Global Alignment and Surgical Targets.",
+          "Evaluation of the efficacy and safety of epidural steroid injection using a nonparticulate steroid, dexamethasone or betamethasone: a double-blind, randomized, crossover, clinical trial.",
+          "Efficacy of intraoperative bulbocavernosus reflex monitoring for the prediction of postoperative voiding function in adult patients with lumbosacral spinal tumor.",
+          "Safety and Efficacy of Recombinant Human Bone Morphogenetic Protein-2 in Multilevel Posterolateral Lumbar Fusion in a Prospective, Randomized, Controlled Trial.",
+          "The Last Touched Vertebra on Supine Radiographs Can Be the Optimal Lower Instrumented Vertebra in Adolescent Idiopathic Scoliosis Patients."
+        ],
+        "photo": "https://www.snubh.org//upload/newdoctors/1000295/김기정_프로필.png\n",
+        "doctor_score": {
+          "paper_score": 0.18026465690999913,
+          "patient_score": 0,
+          "public_score": 0.0020585344391765036,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 2036,
+        "hospital": "계명대동산병원",
+        "address": "대구광역시 달서구 달구벌대로 1035 (신당동)",
+        "lat": 35.8539564853872,
+        "lon": 128.480225817638,
+        "telephone": "1577-6622",
+        "name": "안근수",
+        "deptname": "간담췌외과",
+        "specialties": "부신질환수술, 간담도췌장암, 담낭암, 복강경수술, 기타 양성 질환수술",
+        "url": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=123",
+        "education": "",
+        "career": "[{\"period\":\"2025.03  ~ 현재\",\"type\":\"경력\",\"action\":\"계명대학교 동산병원 이식혈관외과장\",\"url\":null,\"issuer\":null},{\"period\":\"2021.04  ~ 2023.08\",\"type\":\"경력\",\"action\":\"계명대학교 대구동산병원 외과 교수\",\"url\":null,\"issuer\":null},{\"period\":\"2017.03  ~ 현재\",\"type\":\"경력\",\"action\":\"계명대학교 동산병원 간담췌외과분과장\",\"url\":null,\"issuer\":null},{\"period\":\"2017  ~ 현재\",\"type\":\"경력\",\"action\":\"계명대학교 동산병원 외과 부교수\",\"url\":null,\"issuer\":null},{\"period\":\"2021.04  ~ 2022.08\",\"type\":\"경력\",\"action\":\"계명대학교 대구동산병원 기획실장\",\"url\":null,\"issuer\":null},{\"period\":\"2016\",\"type\":\"경력\",\"action\":\"Research fellow at Mayo clinic, MN\",\"url\":null,\"issuer\":null},{\"period\":\"2013  ~ 2016\",\"type\":\"경력\",\"action\":\"계명대학교 동산병원 외과 조교수\",\"url\":null,\"issuer\":null},{\"period\":\"2011  ~ 2012\",\"type\":\"경력\",\"action\":\"계명대학교 동산병원 외과 임상조교수(간담췌외과)\",\"url\":null,\"issuer\":null},{\"period\":\"2008  ~ 2011\",\"type\":\"경력\",\"action\":\"분당서울대학교병원 외과 전임의, 진료교수\",\"url\":null,\"issuer\":null},{\"period\":\"2005  ~ 2007\",\"type\":\"경력\",\"action\":\"한국 국제협력단 (KOICA) 파견 국제협력의사\",\"url\":null,\"issuer\":null},{\"period\":\"-\",\"type\":\"경력\",\"action\":\"Republic Research Center of Emergency Medicine Tashkent, Uzbekistan\",\"url\":null,\"issuer\":null},{\"period\":\"2001  ~ 2005\",\"type\":\"경력\",\"action\":\"계명대학교 동산병원 외과 레지던트\",\"url\":null,\"issuer\":null},{\"period\":\"2000  ~ 2001\",\"type\":\"경력\",\"action\":\"계명대학교 동산병원 인턴\",\"url\":null,\"issuer\":null},{\"period\":\"2012  ~ 2015\",\"type\":\"경력\",\"action\":\"서울대학교 의과대학 의학 박사\",\"url\":null,\"issuer\":null},{\"period\":\"2009  ~ 2011\",\"type\":\"경력\",\"action\":\"서울대학교 의과대학 의학 석사\",\"url\":null,\"issuer\":null},{\"period\":\"1994  ~ 2000\",\"type\":\"경력\",\"action\":\"계명대학교 의과대학 의학 학사\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Practice guidelines for managing extrahepatic biliary tract cancers",
+          "Diagnostic Role of Bile Pigment Components in Biliary Tract Cancer",
+          "Effect of anatomical liver resection for hepatocellular carcinoma: a systematic review and meta-analysis",
+          "Survival outcome of surgical resection compared to non-resection for Bismuth type IV perihilar cholangiocarcinoma",
+          "Anti-Growth, Anti-Angiogenic, and Pro-Apoptotic Effects by CX-4945, an Inhibitor of Casein Kinase 2, on HuCCT-1 Human Cholangiocarcinoma Cells via Control of Caspase-9/3, DR-4, STAT-3/STAT-5, Mcl-1, eIF-2α, and HIF-1α",
+          "Fate of Surgical Patients with Small Nonfunctioning Pancreatic Neuroendocrine Tumors: An International Study Using Multi-Institutional Registries",
+          "Response to the Comment on Regarding Manuscript",
+          "Perihilar Cholangiocarcinoma - Novel Benchmark Values for Surgical and Oncological Outcomes From 24 Expert Centers",
+          "Minimally Invasive Versus Open Pancreatectomy for Right-Sided and Left-Sided G1/G2 Nonfunctioning Pancreatic Neuroendocrine Tumors: A Multicenter Matched Analysis with an Inverse Probability of Treatment-Weighting Method",
+          "Liquid Biopsy from Bile-Circulating Tumor DNA in Patients with Biliary Tract Cancer"
+        ],
+        "photo": "https://dongsan.dsmc.or.kr:49870/data/doctor/안근수 110134.jpg",
+        "doctor_score": {
+          "paper_score": 0.16738235036368418,
+          "patient_score": 0,
+          "public_score": 0.003290412873332856,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 961,
+        "hospital": "한림대성심병원",
+        "address": "경기도 안양시 동안구 관평로170번길 22 (평촌동)",
+        "lat": 37.3916511965629,
+        "lon": 126.961972175812,
+        "telephone": "1577-1801",
+        "name": "유제현",
+        "deptname": "정형외과",
+        "specialties": "고관절, 슬관절",
+        "url": "https://hallym.hallym.or.kr/ptm207.asp?Doctor_Id=977",
+        "education": "[{\"period\":\"2009.02\",\"type\":\"학력\",\"action\":\"연세대학교 대학원 박사\",\"url\":null,\"issuer\":null},{\"period\":\"2005.08\",\"type\":\"학력\",\"action\":\"연세대학교 대학원 석사\",\"url\":null,\"issuer\":null},{\"period\":\"1996.02\",\"type\":\"학력\",\"action\":\"연세대학교 의과대학 학사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"2018.03 ~\",\"type\":\"경력\",\"action\":\"한림대학교성심병원 정형외과 교수\",\"url\":null,\"issuer\":null},{\"period\":\"2018.03 ~ 2022.08\",\"type\":\"경력\",\"action\":\"한림대학교성심병원 정형외과 과장\",\"url\":null,\"issuer\":null},{\"period\":\"2013.09 ~ 2014.12\",\"type\":\"경력\",\"action\":\"Rothman Institute of Orthopaedics at Thomas-Jefferson University Hospital\",\"url\":null,\"issuer\":null},{\"period\":\"2011.08 ~ 2011.09\",\"type\":\"경력\",\"action\":\"AOTrauma international trauma fellowship at John-Hunter hospital, Newcastle, Australia\",\"url\":null,\"issuer\":null},{\"period\":\"2006.05 ~ 2006.11\",\"type\":\"경력\",\"action\":\"세브란스 관절경 연수과정 수료\",\"url\":null,\"issuer\":null},{\"period\":\"2005.03 ~ 2006.02\",\"type\":\"경력\",\"action\":\"한림대학교 한강성심병원 연구전임강사 (인공관절 수료)\",\"url\":null,\"issuer\":null},{\"period\":\"2004.05 ~ 2005.02\",\"type\":\"경력\",\"action\":\"연세대학교 강남세브란스병원 연구강사 (외상 및 골절 수료)\",\"url\":null,\"issuer\":null},{\"period\":\"1997.03 ~ 2001.02\",\"type\":\"경력\",\"action\":\"연세대학교 세브란스병원 정형외과 전공의\",\"url\":null,\"issuer\":null},{\"period\":\"1996.03 ~ 1997.02\",\"type\":\"경력\",\"action\":\"연세대학교 세브란스병원 인턴\",\"url\":null,\"issuer\":null},{\"period\":\"2015.03 ~\",\"type\":\"경력\",\"action\":\"Marquis Who's Who in the world 등재\",\"url\":null,\"issuer\":null},{\"period\":\"~ 2011.12\",\"type\":\"경력\",\"action\":\"AOTrauma international masters course 수료\",\"url\":null,\"issuer\":null},{\"period\":\"~ 2007\",\"type\":\"경력\",\"action\":\"AOTrauma international geriatric course 수료\",\"url\":null,\"issuer\":null},{\"period\":\"~ 2005\",\"type\":\"경력\",\"action\":\"AOTrauma international pelvic and acetabular course 수료\",\"url\":null,\"issuer\":null},{\"period\":\"~ 2004.08\",\"type\":\"경력\",\"action\":\"AOTrauma international advanced course 수료\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Mechanical stability of the proximal tibia with different bone formations after plate removal in medial opening-wedge high tibial osteotomy: a finite element analysis (Journal of Orthopaedic Surgery and Research)",
+          "Clinical significance of trabecular bone score of DXA in hip fracture patients-comparative study between trochanteric fractures and neck fractures (BMC Musculoskeletal disorders)",
+          "Incidence and Risk Factors of Osteonecrosis of the Femoral Head after Cephalomedullary Nailing for Pertrochanteric Fractures: Observational Single-Center Study (CLINICS IN ORTHOPEDIC SURGERY)",
+          "The posterior tibial slope affects the measurement reliability regarding the radiographic parameter of the knee (BMC MUSCULOSKELETAL DISORDERS)",
+          "Treatment of osteoporosis after hip fracture: Survey of the Korean Hip Society (Hip &amp; Pelvis)",
+          "Small Intercondylar Notch Size Is Not Associated with Poor Surgical Outcomes of Anatomical Single-Bundle Anterior Cruciate Ligament Reconstructions (CLINICS IN ORTHOPEDIC SURGERY)",
+          "Surgical drain has no benefits in hemiarthroplasty for femoral neck fractures in elderly patients (SCIENTIFIC REPORTS)",
+          "Marrow stimulation procedures for high-grade cartilage lesions during surgical repair of medial meniscus root tear yielded suboptimal outcomes, whilst small lesions showed surgical eligibility (Knee Surgery, Sports Traumatology, Arthroscopy)",
+          "Use of a blocking screw for nail/medullary canal mismatch after cephalomedullary nailing for unstable pertrochanteric fractures (JOURNAL OF ORTHOPAEDIC SCIENCE)",
+          "Risk Factors of Proximal Screw Breakage of Locking Plate (ZPLPu003Csup&gt;®u003C/sup&gt;) after MIPO for Distal Femur Fractures -Analysis of Patients with Plate Removal after Bony Union- (Journal of Clinical Medicine)<br>골절학 (대한 골절학회)"
+        ],
+        "photo": "https://hallym.hallym.or.kr/CHPFile/treatment/E_20210826_12105115_b_2.png",
+        "doctor_score": {
+          "paper_score": 0.10197762393012588,
+          "patient_score": 0,
+          "public_score": 0.0014267084192580081,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 963,
+        "hospital": "카톡릭대성빈센트병원",
+        "address": "경기도 수원시 팔달구 중부대로 93(지동)",
+        "lat": 37.278504021,
+        "lon": 127.028098137,
+        "telephone": "1577-8588",
+        "name": "곽상현",
+        "deptname": "이비인후과",
+        "specialties": "인공와우이식, 난청, 중이염, 이명, 어지럼증",
+        "url": "https://www.cmcvincent.or.kr/page/doctor/140/D0001814",
+        "education": "[{\"period\":\"2004~2010\",\"type\":\"학력\",\"action\":\"연세대학교 의학 학사\",\"url\":null,\"issuer\":null},{\"period\":\"2016~2022\",\"type\":\"학력\",\"action\":\"연세대학교 이비인후과학 박사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"2023~현재\",\"type\":\"경력\",\"action\":\"가톨릭대학교 성빈센트병원 이비인후과 임상조교수\",\"url\":null,\"issuer\":null},{\"period\":\"2020~2022\",\"type\":\"경력\",\"action\":\"가톨릭대학교 성빈센트병원 이비인후과 임상진료조교수\",\"url\":null,\"issuer\":null},{\"period\":\"2019~2020\",\"type\":\"경력\",\"action\":\"연세대학교 이비인후과학교실 임상연구조교수\",\"url\":null,\"issuer\":null},{\"period\":\"2018~2019\",\"type\":\"경력\",\"action\":\"연세대학교 이비인후과학교실 임상강사\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Effects of Contralateral Routing of Signal Hearing Aids on Audiological and Academic Performance in School-Age Children With Unilateral Hearing Loss",
+          "Supplementary Effect of Choline Alfoscerate on Speech Recognition in Patients With Age-Related Hearing Loss: A Prospective Study in 34 Patients (57 Ears)",
+          "Three-Dimensional Distribution of Cochlear Macrophages in the Lateral Wall of Cleared Cochlea",
+          "Relationship between Hearing Loss and Dementia Differs According to the Underlying Mechanism ",
+          "Neutrophils infiltrate into the spiral ligament but not the stria vascularis in the cochlea during lipopolysaccharide-induced inflammation"
+        ],
+        "photo": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0001814/profile/1",
+        "doctor_score": {
+          "paper_score": 0.08804370052288725,
+          "patient_score": 0,
+          "public_score": 0.0014267084192580081,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 3500,
+        "hospital": "고려대안산병원",
+        "address": "경기도 안산시 단원구 적금로 123 (고잔동)",
+        "lat": 37.3188584497967,
+        "lon": 126.824999466436,
+        "telephone": "031-412-5114",
+        "name": "임채홍",
+        "deptname": "방사선종양학과",
+        "specialties": "폐종양, 비뇨기종양, 유방암, 췌담도암, 전이암뇌종양센터,제브라피쉬중개의학연구소폐종양, 비뇨기종양, 유방암, 췌담도암, 전이암뇌종양센터,제브라피쉬중개의학연구소",
+        "url": "https://ansan.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=7140",
+        "education": "[{\"period\":\"2013 ~ 2015\",\"type\":\"학력\",\"action\":\"고려대학교 의과대학 박사\",\"url\":null,\"issuer\":null},{\"period\":\"2010 ~ 2012\",\"type\":\"학력\",\"action\":\"고려대학교 의과대학 석사\",\"url\":null,\"issuer\":null},{\"period\":\"2000 ~ 2007\",\"type\":\"학력\",\"action\":\"고려대학교 의과대학 학사\",\"url\":null,\"issuer\":null},{\"period\":\"2024 ~ \",\"type\":\"학력\",\"action\":\"(주) CURE analytics 대표\",\"url\":null,\"issuer\":null},{\"period\":\"2024 ~ \",\"type\":\"학력\",\"action\":\"Editor at Cancer Research and Treatment (대한암학회지)\",\"url\":null,\"issuer\":null},{\"period\":\"2023 ~ \",\"type\":\"학력\",\"action\":\"고려대학교 의과대학 연구부학장보\",\"url\":null,\"issuer\":null},{\"period\":\"2023 ~ \",\"type\":\"학력\",\"action\":\"2025 보건복지부 한국인영양소섭취기준 제정위원\",\"url\":null,\"issuer\":null},{\"period\":\"2023 ~ \",\"type\":\"학력\",\"action\":\"대한폐암학회 홍보위원회 간사\",\"url\":null,\"issuer\":null},{\"period\":\"2021 ~ \",\"type\":\"학력\",\"action\":\"대한간학회 정회원\",\"url\":null,\"issuer\":null},{\"period\":\"2021 ~ \",\"type\":\"학력\",\"action\":\"대한췌담도학회 정회원\",\"url\":null,\"issuer\":null},{\"period\":\"2017 ~ \",\"type\":\"학력\",\"action\":\"대한폐암학회 정회원\",\"url\":null,\"issuer\":null},{\"period\":\"2016 ~ \",\"type\":\"학력\",\"action\":\"대한간암학회 평생회원\",\"url\":null,\"issuer\":null},{\"period\":\"2013 ~ \",\"type\":\"학력\",\"action\":\"대한방사선종양학회 정회원\",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"학력\",\"action\":\"조회된 국내경력이 없습니다. \",\"url\":null,\"issuer\":null},{\"period\":\"\",\"type\":\"학력\",\"action\":\"조회된 국외경력이 없습니다. \",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":\"2024 ~ \",\"type\":\"경력\",\"action\":\"(주) CURE analytics 대표\",\"url\":null,\"issuer\":null},{\"period\":\"2024 ~ \",\"type\":\"경력\",\"action\":\"Editor at Cancer Research and Treatment (대한암학회지)\",\"url\":null,\"issuer\":null},{\"period\":\"2023 ~ \",\"type\":\"경력\",\"action\":\"고려대학교 의과대학 연구부학장보\",\"url\":null,\"issuer\":null},{\"period\":\"2023 ~ \",\"type\":\"경력\",\"action\":\"2025 보건복지부 한국인영양소섭취기준 제정위원\",\"url\":null,\"issuer\":null},{\"period\":\"2023 ~ \",\"type\":\"경력\",\"action\":\"대한폐암학회 홍보위원회 간사\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Identifying Trends in Oncology Research through a Bibliographic Analysis of Cancer Research and Treatment",
+          "Systematic Review-Based Treatment Algorithm for the Multidisciplinary Treatment of Lung Cancer Bone Metastases",
+          "Clinical outcomes and safety of external beam radiotherapy with extensive intrahepatic targets for advanced hepatocellular carcinoma: A single institutional clinical experience",
+          "A new proposal of simplified classification of non-small cell lung cancer oligometastases for easy applicability through systematic literature analysis and meta-analysis validation",
+          "Clinical Significance of Biliary Invasion at Diagnosis in Barcelona Clinic Liver Cancer Stage B-C Hepatocellular Carcinoma: A Nationwide Cohort Analysis in South Korea"
+        ],
+        "photo": "https://ansan.kumc.or.kr//displayFile.do?name=20230110.0859.55.797.png",
+        "doctor_score": {
+          "paper_score": 0.049469809832617645,
+          "patient_score": 0,
+          "public_score": 0.0010573116667890064,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 220,
+        "hospital": "충북대병원",
+        "address": "충청북도 청주시 서원구 1순환로 776-0 (개신동,충북대학교병원)",
+        "lat": 36.6241669812126,
+        "lon": 127.461580709683,
+        "telephone": "1533-0075",
+        "name": "민병준",
+        "deptname": "방사선종양학과",
+        "specialties": "특수방사선치료계획(SBRT), 특수방사선치료계획(SRS), 특수방사선치료계획(IMRT), 특수방사선치료계획(IGRT), 정도관리",
+        "url": "https://www.cbnuh.or.kr/prog/doctor/main/sub01_01_01/view.do?drNo=203",
+        "education": "[{\"period\":null,\"type\":\"학력\",\"action\":\"숭실대학교 정보통신전자공학 공학사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"성균관대학교 생명의공학협동과정 이학석사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"성균관대학교 생명의공학협동과정 이학박사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":null,\"type\":\"경력\",\"action\":\"성균관대학교 의학과 연구조교\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"성균관대학교 의학연구소 책임연구원\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"삼성서울병원 생명과학연구소 연구원\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"국립암센터 양성자치료센터 전임의학물리학직\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"강북삼성병원 방사선종양학과 임상 조교수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"현 충북대학교병원 방사선종양학과 임상 부교수\",\"url\":null,\"issuer\":null}]",
+        "paper": [
+          "Feasibility Study of the Fluence-to-Dose Network (FDNet) for Patient-Specific IMRT Quality Assurance. Journal of the Korean Physical Society {2019}",
+          "Super-resolution model for high-precision in vivo proton-range verification using stereo gamma camera. Journal of the Korean Physical Society {2019}",
+          "Non-blind deconvolution with an alternating direction method of multipliers (ADMM) after noise reduction in nondestructive testing. Journal of Instrumentation {2019}",
+          "Study on Treatment Planning for the Prostate in Proton Therapy with Oxygen Enhancement Ratio Effect. Journal of Instrumentation {2020}",
+          "Deep Learning-Based Decision-Tree Classifier for COVID-19 Diagnosis    From Chest X-ray Imaging. Journal of the Korean Physical    Society {2020}",
+          "Cases of high lying azygos arch and its embryological consideration. Frontiers in Medicine {2020}",
+          "Low-dose CBCT reconstruction via joint non-local total variation denoising and cubic B-spline interpolation. Scientific Reports {2021}",
+          "A feasibility study of LYSO-GAPD detector for DEXA applications. Journal of Instrumentation {2021}",
+          "Considerations in Selecting a Fitting a Function for Film Dosimetry in Radiation Therapy. Journal of the Korean Physical Society {2021}",
+          "Signal Enhancement of Low Magnetic Field Magnetic Resonance Image Using a Conventional- and Cyclic-Generative Adversarial Network Models With Unpaired Image Sets. Frontiers in Oncology {2021}"
+        ],
+        "photo": "https://www.cbnuh.or.kr/thumbnail/doctor/300_DR_20220729141641648Qq30.jpg",
+        "doctor_score": {
+          "paper_score": 0.02593988256945053,
+          "patient_score": 0,
+          "public_score": 0.002708075401780573,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      }
+    ]
+  },
+  "used_token": 12037,
+  "in24_used_token": 17564
+}
+2025-08-12T00:51:16.548Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/reviews?doctor_id=3500",
+  "params": "{}",
+  "query": "{\"doctor_id\":\"3500\"}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-08-12T00:51:16.552Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2ms",
+  "statusCode": 200,
+  "responseMessage": "OK",
+  "type": "http_response"
+}
+2025-08-12T00:51:16.553Z [INFO]: {
+  "review": []
+}

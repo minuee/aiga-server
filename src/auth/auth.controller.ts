@@ -171,7 +171,7 @@ export class AuthController {
         agreement
       }
       const decryptedEmail = CryptoUtil.decrypt(email); // your custom function
-      const decryptedProfileImg = CryptoUtil.decrypt(profile_img); // your custom function
+      const decryptedProfileImg = profile_img ? CryptoUtil.decrypt(profile_img) : ''; // your custom function
       returnUserBasic = {
         ...user,
         email : decryptedEmail,
@@ -180,7 +180,7 @@ export class AuthController {
       await this.usersService.update(user_id, user);
     }else {  // 신규 유저
       const encryptedEmail = CryptoUtil.encrypt(email); // your custom function
-      const encryptedProfileImg = CryptoUtil.encrypt(profile_img); // your custom function
+      const encryptedProfileImg = profile_img ? CryptoUtil.encrypt(profile_img) : ''; // your custom function
       returnUserBasic = {
         ...userBasic,
         email,

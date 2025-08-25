@@ -19,6 +19,36 @@
             "date": 1754611489764,
             "name": "aiga-api-renual/error-2025-08-08.log",
             "hash": "feac2d73240779d7ae37cb4e9b5fcd517f027d3d18b9108711c4ca884bef42f2"
+        },
+        {
+            "date": 1754958399977,
+            "name": "aiga-api-renual/error-2025-08-12.log",
+            "hash": "6a1e90ee17d43a878cec291ec5162974119a5747d5734629269c711d59c0b15d"
+        },
+        {
+            "date": 1755047250680,
+            "name": "aiga-api-renual/error-2025-08-13.log",
+            "hash": "9194b8241db1518aa16895d5f3a1342a2012f8ab0ac0f34b5595b5d3cf952c9e"
+        },
+        {
+            "date": 1755130923966,
+            "name": "aiga-api-renual/error-2025-08-14.log",
+            "hash": "336a494577993957e6c700453cc4320cf9fb29f3b9e7babb05601781eab85dc2"
+        },
+        {
+            "date": 1755562374590,
+            "name": "aiga-api-renual/error-2025-08-19.log",
+            "hash": "1e988ef7d52e9c0493894e4fd7fe3cf4ff3cb2d4267413876f4e6552c393610a"
+        },
+        {
+            "date": 1755654509768,
+            "name": "aiga-api-renual/error-2025-08-20.log",
+            "hash": "290aa8d4570afc0054bcfea3feb0138a0edfa863ae33564bc72f53c17dbc86a8"
+        },
+        {
+            "date": 1755754848101,
+            "name": "aiga-api-renual/error-2025-08-21.log",
+            "hash": "8a2a5bb4cefb35a6e670b78ccad46342f5bf588f6af4895b44a0e3efc0768223"
         }
     ],
     "hashType": "sha256"

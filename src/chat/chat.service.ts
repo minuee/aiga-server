@@ -17,7 +17,7 @@ export class ChatService {
   async create(user_id: string, session_id: string, createChatDto: CreateChatDto) {
     
     const remainingHours = 16;
-
+    console.log(`[${new Date().toISOString()}]create start: ${session_id}, `);
     if(user_id && user_id.startsWith('uid_')) {
       const result: { restricted_time: number }[] = await this.prismaService.$queryRaw`
       SELECT 
@@ -27,7 +27,7 @@ export class ChatService {
       `;
 
       const restricted_time = parseInt(result[0]?.restricted_time?.toString() ?? '0');
-
+      console.log(`[${new Date().toISOString()}]restricted_time after: ${restricted_time}, `);
       if(Date.now() < restricted_time) {
         throw new ForbiddenException(`{
           message: '토큰 초과로 인한 이용 제한',
@@ -54,19 +54,24 @@ export class ChatService {
     }
 
     const question = createChatDto.question;
-    
+    console.log(`[${new Date().toISOString()}]question: ${question}, `);
     const chat_url = `http://${process.env.LLM_SERVER_HOST}:${process.env.LLM_SERVER_PORT}/chat/start`;
-
+  
     // llm-server로 질의 요청
     const res = await axios.post(chat_url, {
       session_id: session_id,
       message: question
     });
-
+    console.log(`[${new Date().toISOString()}]res.data `);
     let chat_id;
     const chat_type = res.data.chat_type;
     const summary = res.data?.summary ?? '';
     const used_token = parseInt(res.data.total_tokens);
+    const input_token = res.data?.input_tokens ? parseInt(res.data?.input_tokens) : 0;
+    const output_token = res.data?.output_tokens ? parseInt(res.data?.output_tokens) :  0;
+    const summary_input_token = res.data?.summary_input_tokens ? parseInt(res.data?.summary_input_tokens) :  0;
+    const summary_output_token = res.data?.summary_output_tokens ? parseInt(res.data?.summary_output_tokens) :  0;
+    const summary_total_token = res.data?.summary_total_tokens ? parseInt(res.data?.summary_total_tokens) :  0;
     let in24_used_token = 0;
 
     // 응답에 review 추가
@@ -74,6 +79,7 @@ export class ChatService {
     if( chat_type == 'recommand_doctor' || chat_type == 'search_doctor' ) {
       for(const doctor of answer.doctors) {
         const doctor_id = doctor.doctor_id;
+        const doctor_rid = doctor.doctor_rid;
         try{
           const reviews = await this.prismaService.review.findMany({
             where: {
@@ -108,9 +114,42 @@ export class ChatService {
           console.log("eee",e)
           doctor.review = [];
         }
+
+        try{
+          const bufferRid = Buffer.from(doctor_rid, 'hex');
+          const papers = await this.prismaService.paper.findMany({
+            where: {
+              rid: bufferRid
+            },
+            select: {
+              paper_id: true,
+              title: true,
+              doctorName: true,
+              title_pubmed: true,
+              doi: true,
+              impactFactor: true,
+              totalCitations: true,
+              publicationDate: true,
+              firstAuthors: true,
+              pmid: true,
+              isFirstAuthor: true,
+            },
+            orderBy : [
+              { isFirstAuthor: "desc" },
+              { createAt: "asc" }  // 컬럼 이름 확인 필요
+            ],
+            take : 10
+          });
+
+          console.log(`[${new Date().toISOString()}]papers: ${papers.length}, `);
+          doctor.paper = papers;
+        }catch(e:any) {
+          console.log("eee",e)
+          doctor.paper = [];
+        }
       }
     }
-    
+    console.log(`[${new Date().toISOString()}]chat_type: ${chat_type}, `);
     // user_id 존재하고 uid_ 시작하면 회원
     // (처음)세션 제목, 채팅 저장
     if(user_id && user_id.startsWith('uid_')) {
@@ -135,7 +174,7 @@ export class ChatService {
         WHERE user_id = ${user_id}
         AND question_time >= UTC_TIMESTAMP() - INTERVAL 24 HOUR
       `;
-
+      console.log(`[${new Date().toISOString()}]total_tokens before`);
       const result: { total_tokens: number }[] = await this.prismaService.$queryRaw`
         SELECT COALESCE(SUM(t.used_token), 0) as total_tokens
         FROM (
@@ -144,7 +183,7 @@ export class ChatService {
             WHERE user_id = ${user_id} AND question_time >= UTC_TIMESTAMP() - INTERVAL 24 HOUR
         ) AS t;
       `;
-
+      console.log(`[${new Date().toISOString()}]total_tokens after : ${result[0]?.total_tokens?.toString()}`);
       // 24시간 동안 누적된 토큰 수
       // in24_used_token = result[0]?.total_tokens ?? 0;
       in24_used_token = parseInt(result[0]?.total_tokens?.toString() ?? '0');
@@ -171,7 +210,7 @@ export class ChatService {
         //   timestamp: ${Date.now()}
         // }`);
       }
-
+      console.log(`[${new Date().toISOString()}]session update before`);
       // 세션 제목이 없으면 == 최초 질의로 
       if(session.title == null) {
         // 세션 제목 설정
@@ -181,6 +220,7 @@ export class ChatService {
         });
       }
 
+      console.log(`[${new Date().toISOString()}] session update after`);
       // 대화 저장
       const chat = await this.prismaService.chatting.create({
         data: {
@@ -191,16 +231,21 @@ export class ChatService {
           summary: summary,
           answer: JSON.stringify(answer),
           used_token: used_token,
+          input_token : input_token,
+          output_token : output_token,
+          summary_input_token : summary_input_token,
+          summary_output_token : summary_output_token,
+          summary_total_token : summary_total_token
         },
       });
       chat_id = chat.chat_id;
-
+      console.log(`[${new Date().toISOString()}] chat_id reuslt after : ${chat_id}`);
       // 무조건 세션 업데이트일자를 수정해준다 맨앞으로 오게
       await this.prismaService.session.update({
         where: { session_id: session_id },
         data: {  updateAt: new Date() }
       });
-
+      console.log(`[${new Date().toISOString()}]session update after`);
     }
     else { // 비회원
       const guest_id = user_id;
@@ -231,7 +276,7 @@ export class ChatService {
       
       console.log(`guest_id: ${guest_id}, used_token: ${used_token}, in24_used_token: ${after_total}`);
     }
-
+    console.log(`[${new Date().toISOString()}]chat final`);
     return {
       session_id, 
       chat_id,
@@ -240,7 +285,10 @@ export class ChatService {
       summary,
       answer,
       used_token,
-      in24_used_token
+      in24_used_token,
+      summary_input_token,
+      summary_output_token,
+      summary_total_token
     }
   }
 

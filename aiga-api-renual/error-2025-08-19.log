@@ -1,0 +1,80 @@
+2025-08-19T00:46:17.826Z [ERROR]: 🚨 HTTP ERROR 회원 인증이 필요합니다.
+{
+  "statusCode": 401,
+  "url": "/api/history",
+  "ip": "127.0.0.1",
+  "stack": "UnauthorizedException: 회원 인증이 필요합니다.\n    at UserGuard.canActivate (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/common/guards/user.guard.ts:47:13)\n    at GuardsConsumer.tryActivate (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@nestjs/core/guards/guards-consumer.js:15:34)\n    at canActivateFn (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@nestjs/core/router/router-execution-context.js:135:59)\n    at /Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@nestjs/core/router/router-execution-context.js:42:37\n    at /Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handleRequest (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/router/lib/layer.js:152:17)",
+  "type": "http_error"
+}
+2025-08-19T02:21:54.886Z [ERROR]: 🚨 HTTP ERROR 
+Invalid `this.prismaService.chatting.create()` invocation in
+/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:222:54
+
+  219 
+  220 console.log(`[${new Date().toISOString()}] session update after`);
+  221 // 대화 저장
+→ 222 const chat = await this.prismaService.chatting.create(
+The provided value for the column is too long for the column's type. Column: answer
+{
+  "statusCode": 500,
+  "url": "/api/chat/sid_bf95b0da-79f7-499f-a81a-cdfdf6c6c0be",
+  "ip": "127.0.0.1",
+  "stack": "PrismaClientKnownRequestError: \nInvalid `this.prismaService.chatting.create()` invocation in\n/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:222:54\n\n  219 \n  220 console.log(`[${new Date().toISOString()}] session update after`);\n  221 // 대화 저장\n→ 222 const chat = await this.prismaService.chatting.create(\nThe provided value for the column is too long for the column's type. Column: answer\n    at ri.handleRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)\n    at ri.handleAndLogRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ri.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async l (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:862:24)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:222:20)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:119:20)",
+  "type": "http_error"
+}
+2025-08-19T04:21:55.205Z [ERROR]: 🚨 HTTP ERROR Request failed with status code 500
+{
+  "statusCode": 500,
+  "url": "/api/chat/sid_a73d8fdb-ea31-4c23-9762-bd05bede26d1",
+  "ip": "127.0.0.1",
+  "stack": "AxiosError: Request failed with status code 500\n    at settle (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/adapters/http.js:599:11)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:61:17)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:119:20)",
+  "type": "http_error"
+}
+2025-08-19T04:27:27.755Z [ERROR]: 🚨 HTTP ERROR 
+Invalid `this.prismaService.chatting.create()` invocation in
+/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:223:54
+
+  220 
+  221 console.log(`[${new Date().toISOString()}] session update after`);
+  222 // 대화 저장
+→ 223 const chat = await this.prismaService.chatting.create(
+Null constraint violation on the fields: (`used_token`)
+{
+  "statusCode": 500,
+  "url": "/api/chat/sid_44e730f7-3568-425b-86a3-95ed7af8df0e",
+  "ip": "127.0.0.1",
+  "stack": "PrismaClientKnownRequestError: \nInvalid `this.prismaService.chatting.create()` invocation in\n/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:223:54\n\n  220 \n  221 console.log(`[${new Date().toISOString()}] session update after`);\n  222 // 대화 저장\n→ 223 const chat = await this.prismaService.chatting.create(\nNull constraint violation on the fields: (`used_token`)\n    at ri.handleRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)\n    at ri.handleAndLogRequestError (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)\n    at ri.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)\n    at async l (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:862:24)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:223:20)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:119:20)",
+  "type": "http_error"
+}
+2025-08-19T06:15:43.757Z [ERROR]: 🚨 HTTP ERROR Request failed with status code 506
+{
+  "statusCode": 506,
+  "url": "/api/chat/sid_e9a5ab4d-6ca5-4d79-ac5f-e4f8e1ee4fec",
+  "ip": "127.0.0.1",
+  "stack": "AxiosError: Request failed with status code 506\n    at settle (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/adapters/http.js:599:11)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:61:17)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:119:20)",
+  "type": "http_error"
+}
+2025-08-19T07:40:23.185Z [ERROR]: 🚨 HTTP ERROR Request failed with status code 500
+{
+  "statusCode": 500,
+  "url": "/api/chat/sid_584a6b70-fa28-43ac-a24d-efafbf428891",
+  "ip": "127.0.0.1",
+  "stack": "AxiosError: Request failed with status code 500\n    at settle (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/adapters/http.js:599:11)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:61:17)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:119:20)",
+  "type": "http_error"
+}
+2025-08-19T07:43:35.752Z [ERROR]: 🚨 HTTP ERROR Request failed with status code 500
+{
+  "statusCode": 500,
+  "url": "/api/chat/sid_584a6b70-fa28-43ac-a24d-efafbf428891",
+  "ip": "127.0.0.1",
+  "stack": "AxiosError: Request failed with status code 500\n    at settle (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/adapters/http.js:599:11)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:61:17)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:119:20)",
+  "type": "http_error"
+}
+2025-08-19T08:55:30.935Z [ERROR]: 🚨 HTTP ERROR Request failed with status code 500
+{
+  "statusCode": 500,
+  "url": "/api/chat/sid_ceb51afb-e85f-425b-9189-4e7f06a5c33d",
+  "ip": "127.0.0.1",
+  "stack": "AxiosError: Request failed with status code 500\n    at settle (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/adapters/http.js:599:11)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ChatService.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.service.ts:61:17)\n    at async ChatController.create (/Users/kormedi/Documents/WorkPlace/bitbucket/aiga-api-server/src/chat/chat.controller.ts:119:20)",
+  "type": "http_error"
+}

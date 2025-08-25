@@ -26,7 +26,8 @@ export class RedisService {
   // 게스트 제한 설정 (16시간)
   async setGuestRestriction(guestId: string, restrictionHours: number = 16): Promise<void> {
     const key = `restricted_guest:${guestId}`;
-    const ttlSec = restrictionHours * 3600; // 시간을 초로 변환
+    //const ttlSec = restrictionHours * 3600; // 시간을 초로 변환
+    const ttlSec = 30 * 24 * 3600; // 30일 (2592000초) 반영구적으로 수정 30dlf
     await this.redis.set(key, Date.now(), 'EX', ttlSec);
   }
 

@@ -35,7 +35,6 @@ export class HistoryController {
     return {
       history: result
     }
-
   }
 
   @Get(':session_id')

@@ -108,7 +108,6 @@ export class ChatController {
         throw new UnauthorizedException('비회원, guest_id not found in cookies');
       }
     }
-
     return user_id;
   }
 
@@ -116,15 +115,16 @@ export class ChatController {
   @ResponseMesssage("성공적으로 질의 요청이 처리되었습니다.")
   async create(@Param('session_id') session_id: string, @Body() createChatDto: CreateChatDto, @Req() req: Request) {
     const user_id = await this.getUserId(req);
-
+    console.log(`[${new Date().toISOString()}]chat contoller start`);
     const result = await this.chatService.create(user_id, session_id, createChatDto);
-    
+    console.log(`[${new Date().toISOString()}]chat contoller end , ${result.chat_type}`);
     // 특정 조건일 때 SSE로 이벤트 전송
     if (result.chat_type === 'general') {
       // 스트리밍 방식으로 전송 (10자씩 나누어서)
-      await this.sendStreamingChatEventToUser(user_id, result, 10);
+      //await this.sendStreamingChatEventToUser(user_id, result, 10);
+      //console.log(`[${new Date().toISOString()}]sendStreamingChatEventToUser`);
     }
-    
+    console.log(`[${new Date().toISOString()}]chat return front-end`);
     return result;
   }
 

@@ -13,6 +13,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Paper {
+  paper_id  Int  @id
+  rid Bytes  @db.Binary(16)
+  doctorName  String
+  title    String
+  doi     String?
+  journalName  String?
+  profile_img String?
+  publicationDate DateTime?
+  impactFactor Int?
+  totalCitations Int?
+  title_pubmed String?
+  firstAuthors String?
+  pmid String?
+  isFirstAuthor Int?
+  createAt DateTime?  @default(now())
+  @@map("view_doctor_paper")
+}
+
 model User {
   user_id   String  @id
   sns_type  String
@@ -57,6 +76,11 @@ model Chatting {
   answer         String?   @db.Text
   answer_time    DateTime?   @default(now())
   used_token     Int?
+  input_token    Int?
+  output_token   Int?
+  summary_input_token Int?
+  summary_output_token Int?
+  summary_total_token Int?
   createAt       DateTime? @default(now())
   updateAt       DateTime?
   // Relations
