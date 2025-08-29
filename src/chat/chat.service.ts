@@ -189,6 +189,7 @@ export class ChatService {
       in24_used_token = parseInt(result[0]?.total_tokens?.toString() ?? '0');
 
       in24_used_token += used_token;
+      in24_used_token += summary_total_token;
       // 최대 토큰 초과 여부 파악
       if(in24_used_token > USER_MAX_TOKEN) {
 
@@ -230,7 +231,7 @@ export class ChatService {
           question: question,
           summary: summary,
           answer: JSON.stringify(answer),
-          used_token: used_token,
+          used_token: (used_token + summary_total_token),
           input_token : input_token,
           output_token : output_token,
           summary_input_token : summary_input_token,
@@ -249,7 +250,7 @@ export class ChatService {
     }
     else { // 비회원
       const guest_id = user_id;
-      const TTL_SEC = 84000;  // 24시간 == 1일
+      const TTL_SEC = 30 * 24 * 60 * 60; // 30일
            
       // 현재 24시간 내 사용된 토큰 총합 조회
       const current_total = await this.redisService.getGuestTokenTotal(guest_id);

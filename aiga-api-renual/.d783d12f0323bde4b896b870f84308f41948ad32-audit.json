@@ -49,6 +49,11 @@
             "date": 1755754848101,
             "name": "aiga-api-renual/error-2025-08-21.log",
             "hash": "8a2a5bb4cefb35a6e670b78ccad46342f5bf588f6af4895b44a0e3efc0768223"
+        },
+        {
+            "date": 1756278337855,
+            "name": "aiga-api-renual/error-2025-08-27.log",
+            "hash": "0470bb66aa328a378d2c027d69cf36ca2ac9212bd7f9cdc61b09e3c94854d648"
         }
     ],
     "hashType": "sha256"
