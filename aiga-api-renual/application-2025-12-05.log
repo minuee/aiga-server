@@ -1,0 +1,708 @@
+2025-12-05T00:01:03.197Z [INFO]: 🚀 Logger initialized successfully
+{
+  "logDir": "aiga-api-renual",
+  "nodeEnv": "development",
+  "logLevel": "info",
+  "type": "logger_init"
+}
+2025-12-05T00:01:03.252Z [INFO]: Application started on port 5001
+2025-12-05T00:13:22.779Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/config",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:13:22.780Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "0ms",
+  "statusCode": 200,
+  "responseMessage": "OK",
+  "type": "http_response"
+}
+2025-12-05T00:13:22.781Z [INFO]: {
+  "config": {
+    "user_max_token": "200000",
+    "user_retry_limit_sec": "57600",
+    "guest_max_token": "20000",
+    "guest_retry_limit_sec": "57600"
+  }
+}
+2025-12-05T00:14:48.605Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_8bca2335-7bba-4ee9-9241-f86d0da10311",
+  "params": "{\"session_id\":\"sid_8bca2335-7bba-4ee9-9241-f86d0da10311\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:14:48.605Z [INFO]: {
+  "question": "그럼 이재우 의사는 전에는 어느 병원에서 근무햇어?"
+}
+2025-12-05T00:14:51.444Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2839ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:14:51.444Z [INFO]: {
+  "session_id": "sid_8bca2335-7bba-4ee9-9241-f86d0da10311",
+  "chat_id": 1073,
+  "chat_type": "general",
+  "question": "그럼 이재우 의사는 전에는 어느 병원에서 근무햇어?",
+  "summary": "",
+  "answer": "이재우 의사의 이전 근무 병원 정보는 현재 데이터베이스에 등록되어 있지 않아 알려드리기 어렵습니다. 다른 궁금한 점 있으시면 말씀해 주세요.",
+  "used_token": 1216,
+  "in24_used_token": 68759,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 1347
+}
+2025-12-05T00:15:09.519Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_8bca2335-7bba-4ee9-9241-f86d0da10311",
+  "params": "{\"session_id\":\"sid_8bca2335-7bba-4ee9-9241-f86d0da10311\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:15:09.520Z [INFO]: {
+  "question": "좋아 권용성 의사의 눈문정보등을 좀더 알려줘"
+}
+2025-12-05T00:15:19.923Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "10403ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:15:19.924Z [INFO]: {
+  "session_id": "sid_8bca2335-7bba-4ee9-9241-f86d0da10311",
+  "chat_id": 1074,
+  "chat_type": "general",
+  "question": "좋아 권용성 의사의 눈문정보등을 좀더 알려줘",
+  "summary": "권용성 의사의 논문 정보는 현재 데이터베이스에 없습니다. 다른 정보가 필요하시면 말씀해 주세요.",
+  "answer": "권용성 의사의 논문 정보는 데이터베이스에 존재하지 않습니다.",
+  "used_token": 1152,
+  "in24_used_token": 72578,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 2667
+}
+2025-12-05T00:32:12.750Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "GET",
+  "url": "/api/history",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:32:12.755Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "5ms",
+  "statusCode": 200,
+  "responseMessage": "OK",
+  "type": "http_response"
+}
+2025-12-05T00:32:12.756Z [INFO]: {
+  "history": {
+    "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+    "sessions": [
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_8bca2335-7bba-4ee9-9241-f86d0da10311",
+        "title": "충북대학교병원의 가정의학교 의사를 찾아줘",
+        "session_time": "2025-12-04T09:10:21.345Z",
+        "updateAt": "2025-12-05T00:15:19.903Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_204ac034-a63d-4173-85a8-8dbb868f7958",
+        "title": "안녕",
+        "session_time": "2025-12-04T08:50:09.689Z",
+        "updateAt": "2025-12-04T08:51:03.118Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_aae5bac6-ac2a-4840-9c3e-24b463a62655",
+        "title": "안녕",
+        "session_time": "2025-12-04T08:24:21.877Z",
+        "updateAt": "2025-12-04T08:37:38.033Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_c93bc956-b5cd-4a1e-83bc-7634ba328e21",
+        "title": "안녕",
+        "session_time": "2025-12-04T07:49:16.206Z",
+        "updateAt": "2025-12-04T07:50:49.011Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_5044cfa7-5e67-44ed-8b85-93695299b708",
+        "title": "안녕",
+        "session_time": "2025-12-04T07:18:06.936Z",
+        "updateAt": "2025-12-04T07:20:56.156Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_4c669a89-526d-4cdd-b2e5-9091f16c6a2e",
+        "title": "녹내장 잘하는 명의 추천해줘",
+        "session_time": "2025-10-24T05:24:29.290Z",
+        "updateAt": "2025-11-26T03:37:35.549Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_f478ef03-f99d-4c2f-86e9-ede55b039cad",
+        "title": "잠이 잘 안와 불면증 치료를 하려면 어디로 가야 할까?",
+        "session_time": "2025-11-20T05:40:35.206Z",
+        "updateAt": "2025-11-20T05:40:55.889Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_dce52080-e62b-4420-895f-8cfed9d6a545",
+        "title": "충남대학교병원 비만 전문의좀 알려줘",
+        "session_time": "2025-11-13T05:41:16.316Z",
+        "updateAt": "2025-11-13T06:21:58.465Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_624d8077-ba47-46f6-b8a7-78c210dbcfd9",
+        "title": "간암 수술 명의 추천",
+        "session_time": "2025-11-13T05:35:26.295Z",
+        "updateAt": "2025-11-13T05:37:23.305Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_7665d551-2e4e-4528-b797-51b96c90b456",
+        "title": "안녕",
+        "session_time": "2025-09-26T00:18:00.735Z",
+        "updateAt": "2025-09-26T00:19:13.194Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_218b0b20-7314-4c34-9543-0b88b67613ad",
+        "title": "안녕",
+        "session_time": "2025-09-02T00:27:43.496Z",
+        "updateAt": "2025-09-02T00:41:33.849Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_eb0aecbc-4b84-425a-ab7b-74d0f3d7096c",
+        "title": "김기훈 교수",
+        "session_time": "2025-08-29T05:54:30.966Z",
+        "updateAt": "2025-08-29T06:19:15.088Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_748492ed-55a6-42e4-9f5d-26e8e480f66c",
+        "title": "박영훈 교수",
+        "session_time": "2025-08-29T05:33:21.940Z",
+        "updateAt": "2025-08-29T05:52:44.584Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_5896e712-d855-4361-9664-8239d8f96e33",
+        "title": "안녕",
+        "session_time": "2025-08-27T04:12:36.756Z",
+        "updateAt": "2025-08-27T08:41:13.912Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_d98567bc-0286-4376-b5e8-7eda682408f6",
+        "title": "최근 2주간 가슴 두근거림과 어지러움이 간헐적으로 있어 어떤 진료과를 가야 할까?",
+        "session_time": "2025-08-12T00:23:31.482Z",
+        "updateAt": "2025-08-12T00:24:07.704Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_83927fcf-b8cb-402c-b1b2-be5526408c0c",
+        "title": "안녕1",
+        "session_time": "2025-08-08T03:30:10.747Z",
+        "updateAt": "2025-08-08T08:32:42.188Z",
+        "chattings": []
+      },
+      {
+        "user_id": "uid_f5c13e13-3be4-48c3-859a-09b8df6d8716",
+        "session_id": "sid_b38953d8-3b1a-40cd-ae11-e6c36245319d",
+        "title": "첫번째 대화 기록 수정",
+        "session_time": "2025-08-06T09:01:57.932Z",
+        "updateAt": "2025-08-08T06:46:10.795Z",
+        "chattings": []
+      }
+    ]
+  }
+}
+2025-12-05T00:32:18.468Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/new_session",
+  "params": "{}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:32:18.475Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "7ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:32:18.475Z [INFO]: {
+  "session_id": "sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98"
+}
+2025-12-05T00:32:18.727Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "params": "{\"session_id\":\"sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:32:18.728Z [INFO]: {
+  "question": "안녕"
+}
+2025-12-05T00:32:19.770Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "1042ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:32:19.771Z [INFO]: {
+  "session_id": "sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "chat_id": 1075,
+  "chat_type": "general",
+  "question": "안녕",
+  "summary": "",
+  "answer": "안녕하세요! 건강이나 의료 관련해서 궁금한 점 있으시면 편하게 물어보세요. 어떻게 도와드릴까요?",
+  "used_token": 996,
+  "in24_used_token": 73574,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 0
+}
+2025-12-05T00:32:33.858Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "params": "{\"session_id\":\"sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:32:33.858Z [INFO]: {
+  "question": "충남대학교병원의 가정의학교 의사를 찾아줘"
+}
+2025-12-05T00:32:37.022Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "3164ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:32:37.022Z [INFO]: {
+  "session_id": "sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "chat_id": 1076,
+  "chat_type": "search_doctor",
+  "question": "충남대학교병원의 가정의학교 의사를 찾아줘",
+  "summary": "충남대학교병원 가정의학과 의사로 김성수, 서원윤, 윤석준, 정진규 선생님이 있습니다. 각 의사별 전문 분야와 경력은 병원 홈페이지에서 확인 가능합니다. 도움이 필요하시면 말씀해 주세요.",
+  "answer": {
+    "name": "",
+    "hospital": "충남대학교병원",
+    "deptname": "가정의학과",
+    "doctors": [
+      {
+        "doctor_id": 9131,
+        "doctor_rid": "",
+        "hospital": "충남대학교병원",
+        "address": "대전광역시 중구 문화로 282, (대사동)",
+        "lat": 36.316908,
+        "lon": 127.415363,
+        "telephone": "042-1599-7123",
+        "name": "김성수",
+        "deptname": "가정의학과",
+        "specialties": "비만, 임상영양, 성인병 예방 및 관리",
+        "url": "https://www.cnuh.co.kr/prog/cnuhDoctor/homepage.do?doctorId=DC00000140",
+        "education": "[{\"period\":null,\"type\":\"학력\",\"action\":\"부산대학교 의과대학 의학과 학사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"부산대학교 대학원 의학박사(가정의학)\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":null,\"type\":\"경력\",\"action\":\"(현)충남대학교병원 가정의학과 교수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"(현)식품의약품안전처 건강기능식품심의위원회 위원\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"(현)대한의학회 임상진료지침 평가위원\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"식품의약품안전처 식욕억제제분야 전문가협의체 위원\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"현재                                                                                              대한의학회 당뇨병 임상진료지침 제정위원회/개정위원회 위원\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"질병관리본부 심뇌혈관질환 홍보위원회 위원\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"충남대학교병원 의료질관리실장\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"서울 강남미즈메디병원 가정의학과/비만클리닉 과장\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"아주대학교병원 가정의학과 및 비만클리닉 연구강사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"부산대학교병원 가정의학과 레지던트\",\"url\":null,\"issuer\":null}]",
+        "paper": [],
+        "photo": "https://www.cnuh.co.kr/thumbnail/cnuhDoctor/300_PHO_202010301131185561.jpg",
+        "doctor_score": {
+          "paper_score": 0,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 9132,
+        "doctor_rid": "",
+        "hospital": "충남대학교병원",
+        "address": "대전광역시 중구 문화로 282, (대사동)",
+        "lat": 36.316908,
+        "lon": 127.415363,
+        "telephone": "042-1599-7123",
+        "name": "서원윤",
+        "deptname": "가정의학과",
+        "specialties": "금연, 비만, 음주, 만성피로, 건강검진 상담",
+        "url": "https://www.cnuh.co.kr/prog/cnuhDoctor/homepage.do?doctorId=DC00000608",
+        "education": "[{\"period\":null,\"type\":\"학력\",\"action\":\"2012.03 ~ 2014.08                                                                                                                                            충남대학교 가정의학 석사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"2015.03 ~ 2020.08                                                                                                                                            충남대학교 가정의학 박사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":null,\"type\":\"경력\",\"action\":\"2004.03 ~ 2010.02                                                                                                                                            충남대학교 의과대학\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2018.05 ~ 2020.02                                                                                                                                              충남대학교병원 가정의학과 전임의\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2020.03 ~ 2025.02                                                                                                                                              충남대학교병원 가정의학과 진료교수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2025.03 ~ (현재).                                                                                                                                              충남대학교병원 가정의학과 임상조교수\",\"url\":null,\"issuer\":null}]",
+        "paper": [],
+        "photo": "https://www.cnuh.co.kr/thumbnail/cnuhDoctor/300_PHO_202010301142085911.jpg",
+        "doctor_score": {
+          "paper_score": 0,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 9133,
+        "doctor_rid": "",
+        "hospital": "충남대학교병원",
+        "address": "대전광역시 중구 문화로 282, (대사동)",
+        "lat": 36.316908,
+        "lon": 127.415363,
+        "telephone": "042-1599-7123",
+        "name": "윤석준",
+        "deptname": "가정의학과",
+        "specialties": "금연, 비만, 음주, 만성피로, 건강검진 상담, 호스피스·완화의료",
+        "url": "https://www.cnuh.co.kr/prog/cnuhDoctor/homepage.do?doctorId=DC00000372",
+        "education": "[{\"period\":null,\"type\":\"학력\",\"action\":\"1997 ~ 2003                                                                                                                                            충남대학교 의학과 학사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"2008 ~ 2010                                                                                                                                            충남대학교 예방의학 석사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"2013 ~ 2015                                                                                                                                            충남대학교 가정의학 박사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":null,\"type\":\"경력\",\"action\":\"2003 ~ 2004                                                                                                                                              충남대학교병원 인턴\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2007 ~ 2010                                                                                                                                              충남대학교병원 전공의\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2010 ~ 2011                                                                                                                                              충남대학교병원 가정의학과 전임의\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2012 ~ 2016                                                                                                                                              충남대학교병원 가정의학과 진료교수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2017 ~ 현재                                                                                                                                              충남대학교병원 가정의학과 교수\",\"url\":null,\"issuer\":null}]",
+        "paper": [],
+        "photo": "https://www.cnuh.co.kr/thumbnail/cnuhDoctor/300_PHO_202010301139365031.jpg",
+        "doctor_score": {
+          "paper_score": 0,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      },
+      {
+        "doctor_id": 9134,
+        "doctor_rid": "",
+        "hospital": "충남대학교병원",
+        "address": "대전광역시 중구 문화로 282, (대사동)",
+        "lat": 36.316908,
+        "lon": 127.415363,
+        "telephone": "042-1599-7123",
+        "name": "정진규",
+        "deptname": "가정의학과",
+        "specialties": "금연, 비만, 음주, 만성피로, 건강검진 상담",
+        "url": "https://www.cnuh.co.kr/prog/cnuhDoctor/homepage.do?doctorId=DC00000268",
+        "education": "[{\"period\":null,\"type\":\"학력\",\"action\":\"2007                                                                                            충남대학교 의과대학원 의학박사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"2005                                                                                            충남대학교 의과대학원 의학석사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"1998                                                                                            충남대학교 의과대학 졸업\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":null,\"type\":\"경력\",\"action\":\"2018.9 ~ 현재                                                                                                                                              충남대학교병원 종합건강증진센터장, 암검진부장\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2016.7 ~ 현재                                                                                                                                              충남대학교병원 가정의학과장\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2015.3 ~ 현재                                                                                                                                              충남대학교병원 가정의학과 교수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2014. 8 ~ 2016.1                                                                                                                                              미국 DUKE 의과대학 연수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2013.11                                                                                                                      대전광역 치매센터 자원연계부장\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2010.3 ~ 2015.2                                                                                                                                              충남대학교병원 가정의학과 부교수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2007.3 ~ 2008.2                                                                                                                                              옥천성모병원 가정의학과장\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2005.3 ~ 2007.2                                                                                                                                              가정의학과 전임의\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2001 ~ 2005                                                                                                                                              충남대학병원 전공의과정 수료\",\"url\":null,\"issuer\":null}]",
+        "paper": [],
+        "photo": "https://www.cnuh.co.kr/thumbnail/cnuhDoctor/300_PHO_20250521131735758Yx0.jpg",
+        "doctor_score": {
+          "paper_score": 0,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      }
+    ]
+  },
+  "used_token": 3822,
+  "in24_used_token": 77656,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 260
+}
+2025-12-05T00:33:02.145Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "params": "{\"session_id\":\"sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:33:02.145Z [INFO]: {
+  "question": "이 중에 서원윤 의사의 정보를 좀더 알려줘"
+}
+2025-12-05T00:33:08.838Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "6693ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:33:08.838Z [INFO]: {
+  "session_id": "sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "chat_id": 1077,
+  "chat_type": "search_doctor",
+  "question": "이 중에 서원윤 의사의 정보를 좀더 알려줘",
+  "summary": "서원윤 의사는 충남대학교병원 가정의학과 소속으로 금연, 비만, 음주, 만성피로, 건강검진 상담을 전문으로 합니다. 자세한 정보는 병원 홈페이지(https://www.cnuh.co.kr/prog/cnuhDoctor/homepage.do?doctorId=DC00000608)에서 확인할 수 있습니다.",
+  "answer": {
+    "name": "서원윤",
+    "hospital": "충남대학교병원",
+    "deptname": "가정의학과",
+    "doctors": [
+      {
+        "doctor_id": 9132,
+        "doctor_rid": "653AC1EC6A13C7DEE35504798FE9176D",
+        "hospital": "충남대학교병원",
+        "address": "대전광역시 중구 문화로 282, (대사동)",
+        "lat": 36.316908,
+        "lon": 127.415363,
+        "telephone": "042-1599-7123",
+        "name": "서원윤",
+        "deptname": "가정의학과",
+        "specialties": "금연, 비만, 음주, 만성피로, 건강검진 상담",
+        "url": "https://www.cnuh.co.kr/prog/cnuhDoctor/homepage.do?doctorId=DC00000608",
+        "education": "[{\"period\":null,\"type\":\"학력\",\"action\":\"2012.03 ~ 2014.08                                                                                                                                            충남대학교 가정의학 석사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"2015.03 ~ 2020.08                                                                                                                                            충남대학교 가정의학 박사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":null,\"type\":\"경력\",\"action\":\"2004.03 ~ 2010.02                                                                                                                                            충남대학교 의과대학\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2018.05 ~ 2020.02                                                                                                                                              충남대학교병원 가정의학과 전임의\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2020.03 ~ 2025.02                                                                                                                                              충남대학교병원 가정의학과 진료교수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2025.03 ~ (현재).                                                                                                                                              충남대학교병원 가정의학과 임상조교수\",\"url\":null,\"issuer\":null}]",
+        "paper": [],
+        "photo": "https://www.cnuh.co.kr/thumbnail/cnuhDoctor/300_PHO_202010301142085911.jpg",
+        "doctor_score": {
+          "paper_score": 0,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      }
+    ]
+  },
+  "used_token": 1782,
+  "in24_used_token": 80401,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 963
+}
+2025-12-05T00:33:32.706Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "params": "{\"session_id\":\"sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:33:32.707Z [INFO]: {
+  "question": "그 의사의 논문정보를 알고 싶은데"
+}
+2025-12-05T00:33:39.479Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "6772ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:33:39.480Z [INFO]: {
+  "session_id": "sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "chat_id": 1078,
+  "chat_type": "general",
+  "question": "그 의사의 논문정보를 알고 싶은데",
+  "summary": "충남대학교병원 가정의학과 서원윤 의사의 논문 정보는 제공되지 않습니다. 다른 정보가 필요하시면 말씀해 주세요.",
+  "answer": "죄송합니다 논문의 경우는 당 서비스에서 제공되지 않고 있습니다. 충남대학교병원 가정의학과 서원윤 의사에 대한 다른 정보가 필요하시면 말씀해 주세요.",
+  "used_token": 1205,
+  "in24_used_token": 83600,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 1994
+}
+2025-12-05T00:50:59.554Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "params": "{\"session_id\":\"sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:50:59.555Z [INFO]: {
+  "question": "아 그래 논문은 됐고 그러면 서원윤 의사는 처음부터 충남대학교병원에서 의사생활을 시작햇어 혹시 그 전직장은 어느 병원인지 알수 있을까?"
+}
+2025-12-05T00:51:05.772Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "6217ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:51:05.772Z [INFO]: {
+  "session_id": "sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "chat_id": 1079,
+  "chat_type": "search_doctor",
+  "question": "아 그래 논문은 됐고 그러면 서원윤 의사는 처음부터 충남대학교병원에서 의사생활을 시작햇어 혹시 그 전직장은 어느 병원인지 알수 있을까?",
+  "summary": "서원윤 의사는 충남대학교병원 가정의학과 소속으로, 금연, 비만, 음주, 만성피로, 건강검진 상담을 전문으로 합니다. 이전에는 충남대학교 의과대학과 충남대학교병원 가정의학과에서 전임의 및 진료교수로 근무한 경력이 있습니다. 더 궁금한 점 있으시면 말씀해 주세요.",
+  "answer": {
+    "name": "서원윤",
+    "hospital": "충남대학교병원",
+    "deptname": "가정의학과",
+    "doctors": [
+      {
+        "doctor_id": 9132,
+        "doctor_rid": "653AC1EC6A13C7DEE35504798FE9176D",
+        "hospital": "충남대학교병원",
+        "address": "대전광역시 중구 문화로 282, (대사동)",
+        "lat": 36.316908,
+        "lon": 127.415363,
+        "telephone": "042-1599-7123",
+        "name": "서원윤",
+        "deptname": "가정의학과",
+        "specialties": "금연, 비만, 음주, 만성피로, 건강검진 상담",
+        "url": "https://www.cnuh.co.kr/prog/cnuhDoctor/homepage.do?doctorId=DC00000608",
+        "education": "[{\"period\":null,\"type\":\"학력\",\"action\":\"2012.03 ~ 2014.08                                                                                                                                            충남대학교 가정의학 석사\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"학력\",\"action\":\"2015.03 ~ 2020.08                                                                                                                                            충남대학교 가정의학 박사\",\"url\":null,\"issuer\":null}]",
+        "career": "[{\"period\":null,\"type\":\"경력\",\"action\":\"2004.03 ~ 2010.02                                                                                                                                            충남대학교 의과대학\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2018.05 ~ 2020.02                                                                                                                                              충남대학교병원 가정의학과 전임의\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2020.03 ~ 2025.02                                                                                                                                              충남대학교병원 가정의학과 진료교수\",\"url\":null,\"issuer\":null},{\"period\":null,\"type\":\"경력\",\"action\":\"2025.03 ~ (현재).                                                                                                                                              충남대학교병원 가정의학과 임상조교수\",\"url\":null,\"issuer\":null}]",
+        "paper": [],
+        "photo": "https://www.cnuh.co.kr/thumbnail/cnuhDoctor/300_PHO_202010301142085911.jpg",
+        "doctor_score": {
+          "paper_score": 0,
+          "patient_score": 0,
+          "public_score": 0,
+          "peer_score": 0
+        },
+        "ai_score": {
+          "kindness": 0,
+          "satisfaction": 0,
+          "explanation": 0,
+          "recommendation": 0
+        },
+        "review": []
+      }
+    ]
+  },
+  "used_token": 1822,
+  "in24_used_token": 88742,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 3320
+}
+2025-12-05T00:54:26.588Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "params": "{\"session_id\":\"sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:54:26.588Z [INFO]: {
+  "question": "비만을 전문으로 하시네.. 진료예약을 받으려면 어떻게 해야돼?"
+}
+2025-12-05T00:54:29.464Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2876ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:54:29.465Z [INFO]: {
+  "session_id": "sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "chat_id": 1080,
+  "chat_type": "general",
+  "question": "비만을 전문으로 하시네.. 진료예약을 받으려면 어떻게 해야돼?",
+  "summary": "",
+  "answer": "충남대학교병원 가정의학과 서원윤 의사 진료 예약은 병원 대표 전화 042-1599-7123으로 연락하시거나, 충남대학교병원 공식 홈페이지에서 온라인 예약을 하실 수 있습니다. 도움이 필요하시면 알려주세요.",
+  "used_token": 1890,
+  "in24_used_token": 94678,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 4046
+}
+2025-12-05T00:54:48.519Z [INFO]: 🔵 HTTP REQUEST
+{
+  "method": "POST",
+  "url": "/api/chat/sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "params": "{\"session_id\":\"sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98\"}",
+  "query": "{}",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "type": "http_request"
+}
+2025-12-05T00:54:48.520Z [INFO]: {
+  "question": "충남대학교병원 공식홈페이지를 알려줘"
+}
+2025-12-05T00:54:50.932Z [INFO]: 🟢 HTTP RESPONSE
+{
+  "responseTime": "2411ms",
+  "statusCode": 201,
+  "responseMessage": "Created",
+  "type": "http_response"
+}
+2025-12-05T00:54:50.932Z [INFO]: {
+  "session_id": "sid_ebdde2c8-374d-473b-a2e6-0da6b01b3f98",
+  "chat_id": 1081,
+  "chat_type": "general",
+  "question": "충남대학교병원 공식홈페이지를 알려줘",
+  "summary": "",
+  "answer": "충남대학교병원 공식 홈페이지 주소는 https://www.cnuh.co.kr 입니다. 여기서 진료 예약과 병원 정보 확인이 가능합니다.",
+  "used_token": 1940,
+  "in24_used_token": 101390,
+  "summary_input_token": 0,
+  "summary_output_token": 0,
+  "summary_total_token": 4772
+}

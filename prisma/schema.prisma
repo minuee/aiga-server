@@ -44,6 +44,7 @@ model User {
   agreement Boolean @default(false)
   createdAt DateTime?  @default(now())
   updatedAt DateTime?
+  lastLoginAt DateTime?
   sessions  Session[]
   chattings Chatting[] 
   reviews   Review[]

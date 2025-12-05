@@ -168,6 +168,7 @@ export class AuthController {
         regist_date: new Date(),
         unregist_date: null,
         updatedAt: new Date(),
+        lastLoginAt: new Date(),
         agreement
       }
       const decryptedEmail = CryptoUtil.decrypt(email); // your custom function

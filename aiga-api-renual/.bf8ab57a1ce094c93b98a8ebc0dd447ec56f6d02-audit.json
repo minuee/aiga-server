@@ -6,29 +6,14 @@
     "auditLog": "aiga-api-renual/.bf8ab57a1ce094c93b98a8ebc0dd447ec56f6d02-audit.json",
     "files": [
         {
-            "date": 1755130923964,
-            "name": "aiga-api-renual/application-2025-08-14.log",
-            "hash": "3a680c67ea24c24e77fb317cc1a523e23b4ba5a8b5d08f3735ce34b6cd6be083"
+            "date": 1764832222986,
+            "name": "aiga-api-renual/application-2025-12-04.log",
+            "hash": "00bdc41ed9933b4efe780d4c728acb65f801a56cdcbac8b2ff4b3b3b3b24ee4b"
         },
         {
-            "date": 1755562374588,
-            "name": "aiga-api-renual/application-2025-08-19.log",
-            "hash": "eae678066e30f8a87352da9c413aced7284c859e1130e8b29256202de4b053c4"
-        },
-        {
-            "date": 1755654509767,
-            "name": "aiga-api-renual/application-2025-08-20.log",
-            "hash": "1a8e2322e9e5b183d22ac976e61705990565d5fe01aa6bfe789d35f9b3ab5053"
-        },
-        {
-            "date": 1755754848092,
-            "name": "aiga-api-renual/application-2025-08-21.log",
-            "hash": "1011a1613bc615650bfa67e181246e3578521e16e129ca5a5fbdfa6081f69a1d"
-        },
-        {
-            "date": 1756278337844,
-            "name": "aiga-api-renual/application-2025-08-27.log",
-            "hash": "b0a774bd3e9b9ea1577e004f5f5042bd940b4f34d37ead679da462add39def3e"
+            "date": 1764892863192,
+            "name": "aiga-api-renual/application-2025-12-05.log",
+            "hash": "d03db3f7ebaa3a6018535546c4c7bf1ec577606c6d8068b5d7f69fb236bc85ae"
         }
     ],
     "hashType": "sha256"

@@ -1,8 +1,0 @@
-2025-08-21T05:40:48.105Z [INFO]: 🚀 Logger initialized successfully
-{
-  "logDir": "aiga-api-renual",
-  "nodeEnv": "development",
-  "logLevel": "info",
-  "type": "logger_init"
-}
-2025-08-21T05:40:48.337Z [INFO]: Application started on port 5001

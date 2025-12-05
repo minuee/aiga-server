@@ -105,4 +105,10 @@ export class UserDto implements User {
     example: '2025-05-16T04:19:41.848Z'
   })
   updatedAt: Date;
+
+  @ApiProperty({
+    description: '마지막 로그인일자',
+    example: '2025-05-16T04:19:41.848Z'
+  })
+  lastLoginAt: Date;
 }
